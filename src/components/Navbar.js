@@ -19,6 +19,7 @@ const Navbar = () => {
         <li>
           <Link href="" class="block py-2 pl-3 pr-4  rounded md:bg-transparent text-textColor md:p-0  " aria-current="page">Home</Link>
         </li>
+        {/* df */}
         <li>
           <Link href="#about" class="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">About</Link>
         </li>
