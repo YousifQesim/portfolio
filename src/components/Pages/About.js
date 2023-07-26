@@ -1,5 +1,21 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
+import dynamic from "next/dynamic";
+
+const DownloadButton = dynamic(() => import("../DownloadButton"), {
+  ssr: false,
+});
 const About = () => {
+  const [pdfUrl, setPdfUrl] = useState("");
+
+  const handleDownload = async () => {
+    const response = await fetch("/YusifQasimCv.pdf");
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    setPdfUrl(url);
+  };
+
   return (
     // entire screen div
     <div className="h-screen flex items-center" id="about">
@@ -8,7 +24,7 @@ const About = () => {
         {/* image div */}
         <div className="w-2/4 ">
           <Image
-          className="mx-auto my-0 rounded-2xl "
+            className="mx-auto my-0 rounded-2xl "
             src="/my.jpg"
             alt="Next.js Logo"
             width={400}
@@ -19,8 +35,12 @@ const About = () => {
 
         {/* about information div */}
         <div className="xl:w-2/4 flex flex-col ">
-          <h1 className="text-7xl font-extrabold text-white text-center opacity-5 absolute -top-10 right-24 uppercase">About me</h1>
-          <h3 className="text-xl font-extrabold text-white text-center relative bottom-8">My Introduction</h3>
+          <h1 className="text-7xl font-extrabold text-white text-center opacity-5 absolute -top-10 right-24 uppercase">
+            About me
+          </h1>
+          <h3 className="text-xl font-extrabold text-white text-center relative bottom-4">
+            My Introduction
+          </h3>
           <p className="w-full">
             individual, with broad skills, also energetic and eager to learn new
             ones. I am always highly enthused about my work and tasks ahead,
@@ -53,20 +73,21 @@ const About = () => {
               </span>
             </div>
           </div>
-          <div>
-            <button
-              type="button"
-              class="text-white bg-textColor hover:bg-violet-800 transition ease-in-out delay-10 duration-200 gap-2 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center "
-            >
-              Contact me
-              <Image
-                src="/direct.svg"
-                alt="telegram logo"
-                width={20}
-                height={20}
-                priority
-              />
-            </button>
+          <div className=" my-8" >
+          <div className=" flex justify-center">
+
+              <DownloadButton pdfUrl={pdfUrl} onClick={handleDownload}>
+                Download Resume
+                <Image
+                  src="/download.svg"
+                  alt="telegram logo"
+                  width={20}
+                  height={20}
+                  priority
+                />
+              </DownloadButton>
+            
+                  </div>
           </div>
         </div>
       </div>
