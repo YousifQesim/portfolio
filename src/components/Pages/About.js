@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 const About = () => {
   return (
     // entire screen div
@@ -9,11 +8,11 @@ const About = () => {
         {/* image div */}
         <div className="w-2/4 ">
           <Image
-          className="mx-auto my-0"
+          className="mx-auto my-0 rounded-2xl "
             src="/my.jpg"
             alt="Next.js Logo"
-            width={270}
-            height={screen}
+            width={400}
+            height={400}
             priority
           />
         </div>
