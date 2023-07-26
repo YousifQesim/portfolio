@@ -30,24 +30,24 @@ const About = () => {
             under pressure
           </p>
           {/* experiece and awards div */}
-          <div className="flex gap-2">
-            <div>
-              <h1>+2</h1>
-              <span>
+          <div className="flex gap-10 justify-center mt-6">
+            <div className="text-center">
+              <h1 className="text-white font-bold text-xl">2+</h1>
+              <span className="text-xs">
                 <p>Years</p>
                 <p>Experience</p>
               </span>
             </div>
-            <div>
-              <h1>+10</h1>
-              <span>
+            <div className="text-center">
+              <h1 className="text-white font-bold text-xl">10+</h1>
+              <span className="text-xs">
                 <p>Project</p>
                 <p>Completed</p>
               </span>
             </div>
-            <div>
-              <h1>+05</h1>
-              <span>
+            <div className="text-center">
+              <h1 className="text-white font-bold text-xl">05+</h1>
+              <span className="text-xs">
                 <p>Web Development</p>
                 <p>Certifications</p>
               </span>
