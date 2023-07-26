@@ -35,7 +35,7 @@ const About = () => {
 
         {/* about information div */}
         <div className="md:w-2/4  flex flex-col ">
-          <div className="flex order-3 md:order-none md:my-0 mb-24 relative ">
+          <div className="flex order-3 md:order-none md:my-0 mb-24 md:relative ">
 
           <h1 className="text-7xl font-extrabold text-white text-center opacity-5 absolute -top-20 md:-top-10 md:right-24 uppercase ">
             About me
