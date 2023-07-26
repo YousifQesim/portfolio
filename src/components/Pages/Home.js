@@ -1,116 +1,143 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+
+const AnimatedImage = ({ src, alt, width, height }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Image src={src} alt={alt} width={width} height={height} />
+    </motion.div>
+  );
+};
+
 const Home = () => {
   return (
-    // intire screen dev
-    <div className="h-screen flex justify-center items-center relative" id="">
-      {/* linkes dev */}
-      <div className="flex xl:justify-center justify-start ml-12 xl:ml-0 items-center gap-8 mb-24 flex-wrap ">
-        <div className="flex flex-col gap-6 ">
+    <div className="h-screen flex justify-center items-center relative">
+      <div className="flex xl:justify-center justify-start ml-12 xl:ml-0 items-center gap-8 mb-24 flex-wrap">
+        <div className="flex flex-col gap-6">
           <Link
-            href={
-              "https://iq.linkedin.com/in/yusif-qasim-208473232?trk=people-guest_people_search-card"
-            }
+            href="https://iq.linkedin.com/in/yusif-qasim-208473232?trk=people-guest_people_search-card"
             target="_blank"
-            className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300"
+            className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
           >
-            <Image
+            <AnimatedImage
               src="/linked.svg"
-              alt="linked in logo"
+              alt="LinkedIn logo"
               width={24}
               height={24}
-              priority
             />
           </Link>
           <Link
-            href={"https://github.com/YusifQasim"}
+            href="https://github.com/YusifQasim"
             target="_blank"
-            className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300"
+            className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
           >
-            <Image
+            <AnimatedImage
               src="/github.svg"
-              alt="git hub logo"
+              alt="GitHub logo"
               width={24}
               height={24}
-              priority
             />
           </Link>
           <Link
-            href={"tel:+9647502369315"}
+            href="tel:+9647502369315"
             target="_blank"
-            className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300"
+            className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
           >
-            <Image
+            <AnimatedImage
               src="/telegram.svg"
-              alt="telegram logo"
+              alt="Telegram logo"
               width={24}
               height={24}
-              priority
             />
           </Link>
         </div>
-        {/* the texts and the scroll down div */}
-        <div className=" w-3/4 md:w-1/3  order-3 md:order-none">
-          <div className="">
+        <div className="w-3/4 md:w-1/3 order-3 md:order-none">
+          <div>
             <div>
-              <h1 className="xl:text-5xl text-3xl text-white font-semibold xl:break-words xl:w-52 xl:leading-tight">
+              <motion.h1
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                className="xl:text-5xl text-3xl text-white font-semibold xl:break-words xl:w-52 xl:leading-tight"
+              >
                 Hi, I am Yusif
-              </h1>
-              <h3 className=" text-base font-bold text-grayColor  mb-3">
+              </motion.h1>
+              <motion.h3
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                className="text-base font-bold text-grayColor mb-3"
+              >
                 Front End Web Developer
-              </h3>
-              <p className="w-4/4 text-xs text-grayColor font-medium mb-3">
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                className="w-4/4 text-xs text-grayColor font-medium mb-3"
+              >
                 I have a passion for building intuitive, user-friendly
                 interfaces that provide an enjoyable and seamless user
                 experience.
-              </p>
-              <button
-                type="button"
-                class="text-white bg-violet-600 hover:bg-violet-800 transition ease-in-out delay-10 duration-200 gap-2 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center "
+              </motion.p>
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 0.8    }}
+                className="text-white bg-violet-600 hover:bg-violet-800 transition ease-in-out delay-10 duration-200 gap-2  focus:outline-none font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center"
               >
                 Contact me
-                <Image
+                <AnimatedImage
                   src="/direct.svg"
-                  alt="telegram logo"
+                  alt="Telegram logo"
                   width={20}
                   height={20}
-                  priority
                 />
-              </button>
+              </motion.button>
             </div>
 
-            <Link href={"#about"}>
-              <div className="xl:flex gap-1 absolute bottom-32 hidden ">
-                <Image
+            <Link href="#about">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.5 }}
+                className="xl:flex gap-1 absolute bottom-32 hidden"
+              >
+                <AnimatedImage
                   src="/mouse.svg"
-                  alt="mouse Logo"
+                  alt="Mouse logo"
                   width={24}
                   height={24}
-                  priority
                 />
-                <p>Scroll Down</p>
-                <Image
-                  className="animate-bounce "
-                  src="/down.svg"
-                  alt="down Logo"
-                  width={24}
-                  height={24}
-                  priority
-                />
-              </div>
+
+                <p className="text-white text-xs font-medium">
+                  Scroll down to learn more
+                </p>
+              </motion.div>
             </Link>
           </div>
         </div>
 
-        {/* personal image div */}
-        <div className="">
-          <Image
-            src="/my.jpg"
-            alt="Next.js Logo"
-            width={270}
-            height={270}
-            priority
-          />
+        <div className="md:w-1/3 order-2 md:order-none">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative w-full md:w-4/5 mx-auto"
+          >
+            <AnimatedImage
+              src="/my.jpg"
+              alt="Personal Image"
+              width={270}
+              height={270}
+            />
+          </motion.div>
         </div>
       </div>
     </div>
