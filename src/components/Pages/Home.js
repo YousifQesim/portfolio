@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 const Home = () => {
   return (
     // intire screen dev
@@ -7,13 +7,17 @@ const Home = () => {
       {/* linkes dev */}
       <div className="flex xl:justify-center justify-start ml-12 xl:ml-0 items-center gap-8 mb-24 flex-wrap ">
         <div className="flex flex-col gap-6 ">
+      <Link href={"https://iq.linkedin.com/in/yusif-qasim-208473232?trk=people-guest_people_search-card"} target="_blank">
           <Image
             src="/linked.svg"
             alt="linked in logo"
             width={24}
             height={24}
             priority
-          />
+            />
+            </Link>  
+            <Link href={"https://github.com/YusifQasim"} target="_blank">
+
           <Image
             src="/github.svg"
             alt="git hub logo"
@@ -21,6 +25,8 @@ const Home = () => {
             height={24}
             priority
           />
+          </Link>
+          <Link href={"tel:+9647502369315"} target="_blank">
           <Image
             src="/telegram.svg"
             alt="telegram logo"
@@ -28,6 +34,7 @@ const Home = () => {
             height={24}
             priority
           />
+          </Link>
         </div>
         {/* the texts and the scroll down div */}
         <div className=" w-3/4 md:w-1/3  order-3 md:order-none">
@@ -71,6 +78,7 @@ const Home = () => {
               />
               <p>Scroll Down</p>
               <Image
+              className="animate-pulse"
                 src="/down.svg"
                 alt="down Logo"
                 width={24}
