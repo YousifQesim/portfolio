@@ -33,17 +33,17 @@ function Skills() {
             transition={{ delay: 2, duration: 0.5 }}
             className="flex order-3 md:order-none md:my-0 mb-24 "
           >
-            <h1 className="text-7xl font-extrabold text-white text-center opacity-5 absolute top-20 right-[42%] uppercase">
+            <h1 className="text-7xl font-extrabold text-white text-center opacity-5 absolute top-20  right-[25%] md:right-[42%] uppercase">
             Skills
             </h1>
-            <h3 className="text-xl font-extrabold text-white text-center absolute top-[102px] right-[45%]">
+            <h3 className="text-xl font-extrabold text-white text-center absolute top-[102px] md:right-[45%] right-[35%]">
               My Tech Stack
             </h3>
           </motion.div>
       <div className="container mx-auto  flex justify-center items-center flex-col h-screen ">
         
         <motion.div
-          className="grid md:grid-cols-4 grid-cols-3 gap-8 gap-x-20"
+          className="grid md:grid-cols-4 grid-cols-3 gap-8 md:gap-x-20 gap-x-12"
           variants={containerVariants}
           initial="hidden"
           animate={controls}
