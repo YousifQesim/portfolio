@@ -1,10 +1,10 @@
-"use client";
-import { motion } from "framer-motion";
+"use client"
+import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import NumberCounters from "../NumberCounters";
-
+import { useInView } from "react-intersection-observer";
 
 const DownloadButton = dynamic(() => import("../DownloadButton"), {
   ssr: false,
@@ -12,6 +12,16 @@ const DownloadButton = dynamic(() => import("../DownloadButton"), {
 
 const About = () => {
   const [pdfUrl, setPdfUrl] = useState("");
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ threshold: 0.5 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
 
   const handleDownload = async () => {
     const response = await fetch("/YusifQasimCv.pdf");
@@ -22,18 +32,18 @@ const About = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: -50 },
+      }}
       transition={{ duration: 1 }}
-      className=" about  flex items-center relative"
+      className="about flex items-center relative"
       id="about"
+      ref={ref}
     >
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 1 }}
-        className="flex justify-center items-center md:w-3/4 mx-auto my-0 flex-wrap md:relative absolute top-20"
-      >
+      <div className="flex justify-center items-center md:w-3/4 mx-auto my-0 flex-wrap md:relative absolute top-20">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -115,7 +125,7 @@ const About = () => {
             </motion.div>
           </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 };
