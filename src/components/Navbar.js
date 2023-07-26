@@ -21,7 +21,7 @@ const Navbar = () => {
         </li>
         {/* df */}
         <li>
-          <Link href="#about" class="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">About</Link>
+          <Link href="/#about" class="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">About</Link>
         </li>
         <li>
           <Link href="#" class="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">Services</Link>
