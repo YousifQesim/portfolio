@@ -4,6 +4,9 @@ const Home = () => {
   return (
     // intire screen dev
     <div className="h-screen flex justify-center items-center relative" id="">
+      <Link href={"#about"}>
+      about
+      </Link>
       {/* linkes dev */}
       <div className="flex xl:justify-center justify-start ml-12 xl:ml-0 items-center gap-8 mb-24 flex-wrap ">
         <div className="flex flex-col gap-6 ">

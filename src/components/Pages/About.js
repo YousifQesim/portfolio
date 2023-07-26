@@ -18,9 +18,9 @@ const About = () => {
 
   return (
     // entire screen div
-    <div className="h-screen flex items-center" id="about">
+    <div className="min-h-screen flex items-center relative" id="about">
       {/* section div */}
-      <div className="flex justify-center items-center xl:w-3/4 mx-auto my-0 relative">
+      <div className="flex justify-center items-center md:w-3/4 mx-auto my-0  flex-wrap md:relative absolute top-20 ">
         {/* image div */}
         <div className="w-2/4 ">
           <Image
@@ -34,14 +34,17 @@ const About = () => {
         </div>
 
         {/* about information div */}
-        <div className="xl:w-2/4 flex flex-col ">
-          <h1 className="text-7xl font-extrabold text-white text-center opacity-5 absolute -top-10 right-24 uppercase">
+        <div className="md:w-2/4  flex flex-col ">
+          <div className="flex order-3 md:order-none md:my-0 mb-24 relative ">
+
+          <h1 className="text-7xl font-extrabold text-white text-center opacity-5 absolute -top-20 md:-top-10 md:right-24 uppercase ">
             About me
           </h1>
-          <h3 className="text-xl font-extrabold text-white text-center relative bottom-4">
+          <h3 className="text-xl font-extrabold text-white text-center absolute -top-14 left-[30%] md:-top-4 md:left-[215px]">
             My Introduction
           </h3>
-          <p className="w-full">
+          </div>
+          <p className=" white text-justify  mt-12  mx-auto my-0 w-3/4">
             individual, with broad skills, also energetic and eager to learn new
             ones. I am always highly enthused about my work and tasks ahead,
             extremely driven, with a clear goal to succeed, and committed to
