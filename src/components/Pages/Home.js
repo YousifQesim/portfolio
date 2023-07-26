@@ -5,7 +5,7 @@ const Home = () => {
     // intire screen dev
     <div className="h-screen flex justify-center items-center relative" id="">
       {/* linkes dev */}
-      <div className="flex justify-center items-center gap-8 mb-24 flex-wrap ">
+      <div className="flex xl:justify-center justify-start ml-12 xl:ml-0 items-center gap-8 mb-24 flex-wrap ">
         <div className="flex flex-col gap-6 ">
           <Image
             src="/linked.svg"
@@ -33,26 +33,35 @@ const Home = () => {
         <div className=" w-3/4 md:w-1/3  order-3 md:order-none">
           <div className="">
             <div>
-              <h1 className="text-5xl text-white font-semibold break-words w-52 leading-tight">Hi, I am Yusif</h1>
+              <h1 className="xl:text-5xl text-3xl text-white font-semibold xl:break-words xl:w-52 xl:leading-tight">
+                Hi, I am Yusif
+              </h1>
               <h3 className=" text-base font-bold text-grayColor  mb-3">
-                Front End Web Developer 
+                Front End Web Developer
               </h3>
               <p className="w-4/4 text-xs text-grayColor font-medium mb-3">
                 I have a passion for building intuitive, user-friendly
                 interfaces that provide an enjoyable and seamless user
                 experience.
               </p>
-              <a href="#contact" className="flex gap-2 bg-textColor text-white rounded-lg w-36 p-2 mt-4">
-                Contact Me  <Image
+              <button
+              type="button"
+              class="text-white bg-textColor gap-2 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center "
+            >
+            Contact me
+            <Image
             src="/direct.svg"
-            alt="Next.js Logo"
-            width={18}
-            height={18}
+            alt="telegram logo"
+            width={20}
+            height={20}
             priority
           />
-              </a>
+            </button>
             </div>
-            <div className="flex gap-1 absolute bottom-32 ">
+
+            
+
+            <div className="xl:flex gap-1 absolute bottom-32 hidden ">
               <Image
                 src="/mouse.svg"
                 alt="mouse Logo"
@@ -62,7 +71,6 @@ const Home = () => {
               />
               <p>Scroll Down</p>
               <Image
-            
                 src="/down.svg"
                 alt="down Logo"
                 width={24}
