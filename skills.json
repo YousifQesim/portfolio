@@ -1,0 +1,46 @@
+[
+  {
+    "name": "HTML",
+    "logo": "https://cdn.worldvectorlogo.com/logos/html-1.svg"
+  },
+  {
+    "name": "CSS",
+    "logo": "https://cdn.worldvectorlogo.com/logos/css-3.svg"
+  },
+  {
+    "name": "JavaScript",
+    "logo": "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg"
+  },
+  {
+    "name": "Tailwind",
+    "logo": "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg"
+  },
+  {
+    "name": "Bootstrap",
+    "logo": "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg"
+  },
+  {
+    "name": "React js",
+    "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+  },
+  {
+    "name": "Next js",
+    "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+  },
+  {
+    "name": "Type Script",
+    "logo": "https://cdn.worldvectorlogo.com/logos/typescript-2.svg"
+  },
+  {
+    "name": "Firebase",
+    "logo": "https://cdn.worldvectorlogo.com/logos/firebase-2.svg"
+  },
+  {
+    "name": "My SQL",
+    "logo": "https://cdn.worldvectorlogo.com/logos/mysql-6.svg"
+  },
+  {
+    "name": "Spring Boot",
+    "logo": "https://cdn.worldvectorlogo.com/logos/spring-3.svg"
+  }
+]

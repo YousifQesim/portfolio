@@ -46,3 +46,6 @@ z-index: -1;
 transform: rotate(-30deg);
 }
 
+.about{
+  min-height: 130vh;
+}

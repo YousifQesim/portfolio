@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import NumberCounters from "../NumberCounters";
+
 
 const DownloadButton = dynamic(() => import("../DownloadButton"), {
   ssr: false,
@@ -24,7 +25,7 @@ const About = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="min-h-screen flex items-center relative"
+      className=" about  flex items-center relative"
       id="about"
     >
       <motion.div
