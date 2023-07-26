@@ -4,7 +4,7 @@ const About = () => {
     // entire screen div
     <div className="h-screen flex items-center" id="about">
       {/* section div */}
-      <div className="flex justify-center items-center xl:w-3/4 border-2 border-solid border-red-700 mx-auto my-0 ">
+      <div className="flex justify-center items-center xl:w-3/4 mx-auto my-0 relative">
         {/* image div */}
         <div className="w-2/4 ">
           <Image
@@ -19,8 +19,8 @@ const About = () => {
 
         {/* about information div */}
         <div className="xl:w-2/4 flex flex-col ">
-          <h1>About me</h1>
-          <h3>My Introduction</h3>
+          <h1 className="text-7xl font-extrabold text-white text-center opacity-5 absolute -top-10 right-24 uppercase">About me</h1>
+          <h3 className="text-xl font-extrabold text-white text-center relative bottom-8">My Introduction</h3>
           <p className="w-full">
             individual, with broad skills, also energetic and eager to learn new
             ones. I am always highly enthused about my work and tasks ahead,
