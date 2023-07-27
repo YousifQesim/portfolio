@@ -39,15 +39,32 @@ const About = () => {
         hidden: { opacity: 0, y: -50 },
       }}
       transition={{ duration: 1 }}
-      className="about  flex items-center relative"
+      className="about  flex items-center relative "
       id="about"
       ref={ref}
     >
-      <div className="flex justify-center items-center md:w-3/4 mx-auto my-0 flex-wrap md:relative absolute top-20">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+            className="flex flex-col  md:my-0 absolute top-0 w-full  h-auto lg:hidden"
+          >
+            
+
+            <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
+              About
+            </h1>
+            <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[25%] vsm:left-[30%] md:left-[40%] ">
+              My Introduction
+            </h3>
+        
+          </motion.div>
+      <div className="flex justify-center items-center flex-col  lg:flex-row md:w-3/4 lg:w-5/6  mx-auto my-0 flex-wrap md:relative absolute top-24 md:top-8 ">
+    
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
+          transition={{ delay: 2, duration: 0.5 }}
           className="w-2/4"
         >
           <Image
@@ -64,26 +81,30 @@ const About = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.5 }}
-          className="md:w-2/4 flex flex-col"
+          className=" flex flex-col lg:w-2/4 xl:w-2/4"
         >
-          <motion.div
+            <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 0.5 }}
-            className="flex order-3 md:order-none md:my-0 mb-24 md:relative"
+            transition={{ delay: 1, duration: 0.5 }}
+            className="lg:flex lg:flex-col  md:my-0  h-auto hidden "
           >
-            <h1 className="text-7xl font-extrabold text-white text-center opacity-5 absolute right-[50%] vsm:-top-20 md:-top-10 md:right-24 uppercase">
-              About
+            
+
+            <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
+              About me
             </h1>
-            <h3 className="text-xl font-extrabold text-white text-center absolute -top-14 left-[30%] md:-top-4 md:left-[215px]">
+            <h3 className="text-xl font-extrabold text-white text-center absolute top-6 lg:right-[15%] xl:right-[18%] ">
               My Introduction
             </h3>
+        
           </motion.div>
+        
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2.5, duration: 0.5 }}
-            className="white text-justify mt-12 mx-auto my-0 w-3/4"
+            className="white text-justify mt-12 mx-auto my-0 w-3/4 md:w-full"
           >
             I am an individual with broad skills, also energetic and eager to
             learn new ones. I am always highly enthused about my work and tasks
