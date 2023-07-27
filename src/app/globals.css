@@ -52,3 +52,21 @@ transform: rotate(-30deg);
   min-height: 100vh;
   overflow:hidden;
 }
+
+/* Change color of vertical line */
+.vertical-timeline::before {
+  --line-color: #6e57e0;
+}
+
+
+.vertical-timeline--two-columns .vertical-timeline-element-icon {
+  width: 30px !important;
+  height: 31px !important;
+  left: 52% !important;
+  margin-left: -38px !important;
+
+}
+.vertical-timeline-element-icon {
+  border-color: red !important;
+  --tw-ring-offset-color: red !important;
+}
