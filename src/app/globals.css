@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+  box-sizing: border-box;
+}
 body {
   font-family: "Poppins", Arial, sans-serif;
   background: hsl(250, 28%, 12%);
@@ -46,6 +48,7 @@ z-index: -1;
 transform: rotate(-30deg);
 }
 
-.about{
-  min-height: 135vh;
+.about {
+  min-height: 100vh;
+  overflow:hidden;
 }

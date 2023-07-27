@@ -39,113 +39,95 @@ const About = () => {
         hidden: { opacity: 0, y: -50 },
       }}
       transition={{ duration: 1 }}
-      className="about  flex items-center relative "
+      className="about  flex items-center relative"
       id="about"
       ref={ref}
+      style={{ overflow: "hidden" }}
     >
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-            className="flex flex-col  md:my-0 absolute top-0 w-full  h-auto lg:hidden"
-          >
-            
-
-            <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
-              About
-            </h1>
-            <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[25%] vsm:left-[30%] md:left-[40%] ">
-              My Introduction
-            </h3>
-        
-          </motion.div>
-      <div className="flex justify-center items-center flex-col  lg:flex-row md:w-3/4 lg:w-5/6  mx-auto my-0 flex-wrap md:relative absolute top-24 md:top-8 ">
-    
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 2, duration: 0.5 }}
-          className="w-2/4"
-        >
-          <Image
-            className="mx-auto my-0 rounded-2xl"
-            src="/my.jpg"
-            alt="Next.js Logo"
-            width={400}
-            height={400}
-            priority
-          />
-        </motion.div>
-
+      <div className="flex flex-col md:my-0 md:w-3/4 lg:w-5/6 mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
-          className=" flex flex-col lg:w-2/4 xl:w-2/4"
+          transition={{ delay: 1, duration: 0.5 }}
         >
-            <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-            className="lg:flex lg:flex-col  md:my-0  h-auto hidden "
-          >
-            
+          <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
+            About
+          </h1>
+          <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[25%] md:left-[40%] ">
+            My Introduction
+          </h3>
+        </motion.div>
 
-            <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
-              About me
-            </h1>
-            <h3 className="text-xl font-extrabold text-white text-center absolute top-6 lg:right-[15%] xl:right-[18%] ">
-              My Introduction
-            </h3>
-        
-          </motion.div>
-        
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2.5, duration: 0.5 }}
-            className="white text-justify mt-12 mx-auto my-0 w-3/4 md:w-full"
+        <div className="flex justify-center items-center flex-col lg:flex-row mt-24 md:mt-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 2, duration: 0.5 }}
+            className="w-2/4"
           >
-            I am an individual with broad skills, also energetic and eager to
-            learn new ones. I am always highly enthused about my work and tasks
-            ahead, extremely driven, with a clear goal to succeed, and committed
-            to learning and self-development. Furthermore, I am adept at
-            handling multiple tasks on a daily basis competently and at working
-            well under pressure.
-          </motion.p>
+            <Image
+              className="mx-auto my-0 rounded-2xl"
+              src="/my.jpg"
+              alt="Next.js Logo"
+              width={400}
+              height={400}
+              priority
+            />
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 3, duration: 0.5 }}
-            className="flex gap-10 justify-center mt-6"
+            transition={{ delay: 1.5, duration: 0.5 }}
+            className="flex flex-col lg:w-2/4"
           >
-            <NumberCounters />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 3.5, duration: 0.5 }}
-            className="my-8"
-          >
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2.5, duration: 0.5 }}
+              className="white text-justify mt-12 mx-auto my-0 w-3/4 md:w-full"
+            >
+              I am an individual with broad skills, also energetic and eager to
+              learn new ones. I am always highly enthused about my work and tasks
+              ahead, extremely driven, with a clear goal to succeed, and committed
+              to learning and self-development. Furthermore, I am adept at
+              handling multiple tasks on a daily basis competently and at working
+              well under pressure.
+            </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 4, duration: 0.5 }}
-              className="flex justify-center"
+              transition={{ delay: 3, duration: 0.5 }}
+              className="flex gap-10 justify-center mt-6"
             >
-              <DownloadButton pdfUrl={pdfUrl} onClick={handleDownload}>
-                Download Resume
-                <Image
-                  src="/download.svg"
-                  alt="telegram logo"
-                  width={20}
-                  height={20}
-                  priority
-                />
-              </DownloadButton>
+              <NumberCounters />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 3.5, duration: 0.5 }}
+              className="my-8"
+            >
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 4, duration: 0.5 }}
+                className="flex justify-center"
+              >
+                <DownloadButton pdfUrl={pdfUrl} onClick={handleDownload}>
+                  Download Resume
+                  <Image
+                    src="/download.svg"
+                    alt="telegram logo"
+                    width={20}
+                    height={20}
+                    priority
+                  />
+                </DownloadButton>
+              </motion.div>
             </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </motion.div>
   );
