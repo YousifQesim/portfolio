@@ -5,7 +5,7 @@ import skillsData from "/skills.json";
 import { useEffect } from 'react';
 
 function Skills() {
-  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { ref, inView } = useInView({ threshold: 0.7 });
   const controls = useAnimation();
 
   const containerVariants = {
@@ -63,10 +63,10 @@ function Skills() {
           {skillsData.map((skill) => (
             <motion.div
               key={skill.name}
-              className="p-4"
+              className="p-4 "
               variants={logoVariants}
             >
-              <div className="flex flex-col items-center justify-center">
+              <div className="flex flex-col items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer">
                 <div className="h-12 w-12 flex items-center">
                   <motion.img
                     src={skill.logo}
