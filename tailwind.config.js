@@ -16,6 +16,10 @@ module.exports = {
         textColor:'	#6e57e0',
         grayColor:'#bcbac4'
       },
+      screens: {
+        'vsm': '350px',
+        
+      }
     
     },
   },

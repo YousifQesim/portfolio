@@ -39,7 +39,7 @@ const About = () => {
         hidden: { opacity: 0, y: -50 },
       }}
       transition={{ duration: 1 }}
-      className="about flex items-center relative"
+      className="about  flex items-center relative"
       id="about"
       ref={ref}
     >
@@ -72,8 +72,8 @@ const About = () => {
             transition={{ delay: 2, duration: 0.5 }}
             className="flex order-3 md:order-none md:my-0 mb-24 md:relative"
           >
-            <h1 className="text-7xl font-extrabold text-white text-center opacity-5 absolute -top-20 md:-top-10 md:right-24 uppercase">
-              About me
+            <h1 className="text-7xl font-extrabold text-white text-center opacity-5 absolute right-[50%] vsm:-top-20 md:-top-10 md:right-24 uppercase">
+              About
             </h1>
             <h3 className="text-xl font-extrabold text-white text-center absolute -top-14 left-[30%] md:-top-4 md:left-[215px]">
               My Introduction

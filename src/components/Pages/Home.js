@@ -18,12 +18,12 @@ const AnimatedImage = ({ src, alt, width, height }) => {
 const Home = () => {
   return (
     <div className="h-screen flex justify-center items-center relative">
-      <div className="flex xl:justify-center justify-start ml-12 xl:ml-0 items-center gap-8 mb-24 flex-wrap">
-        <div className="flex flex-col gap-6">
+      <div className="flex xl:justify-center justify-start md:ml-12 ml-4 xl:ml-0 items-center gap-8 mb-24 flex-wrap">
+        <div className="flex vsm:flex-col flex-row order-last vsm:order-first    gap-6">
           <Link
             href="https://iq.linkedin.com/in/yusif-qasim-208473232?trk=people-guest_people_search-card"
             target="_blank"
-            className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:shadow-2xl shadow-violet-700"
           >
             <AnimatedImage
               src="/linked.svg"
