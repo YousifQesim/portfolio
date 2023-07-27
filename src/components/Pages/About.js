@@ -44,8 +44,9 @@ const About = () => {
       ref={ref}
       style={{ overflow: "hidden" }}
     >
-      <div className="flex flex-col md:my-0 md:w-3/4 lg:w-5/6 mx-auto">
+      <div className="flex flex-col md:my-0 md:w-3/4 lg:w-5/6 mx-auto ">
         <motion.div
+        className="lg:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
@@ -53,7 +54,7 @@ const About = () => {
           <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
             About
           </h1>
-          <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[25%] md:left-[40%] ">
+          <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[27%] vsm:left-[30%] m:left-[33%] md:left-[40%] lg:left-[43%] xl:left-[45%] ">
             My Introduction
           </h3>
         </motion.div>
@@ -81,6 +82,22 @@ const About = () => {
             transition={{ delay: 1.5, duration: 0.5 }}
             className="flex flex-col lg:w-2/4"
           >
+                <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+            className="lg:flex lg:flex-col lg:relative md:my-0  h-auto hidden "
+          >
+            
+
+            <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
+              About me
+            </h1>
+            <h3 className="text-xl font-extrabold text-white text-center absolute top-6 lg:right-[30%] xl:right-[38%] ">
+              My Introduction
+            </h3>
+        
+          </motion.div>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
