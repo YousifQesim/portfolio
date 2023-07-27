@@ -26,11 +26,12 @@ function Skills() {
   }, [controls, inView]);
 
   return (
-    <div className="min-h-screen relative" ref={ref}>
+    <div className="min-h-screen relative my-8" ref={ref} id='skills'>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className='my-8'
         >
           <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
           Skills
@@ -40,7 +41,7 @@ function Skills() {
           </h3>
         </motion.div>
       
-      <div className="container mx-auto  flex justify-center items-center flex-col mt-8 ">
+      <div className="container mx-auto  flex justify-center items-center flex-col  ">
         
         <motion.div
           className="grid md:grid-cols-4 grid-cols-3 gap-8 md:gap-x-20 gap-x-12"

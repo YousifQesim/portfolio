@@ -24,7 +24,7 @@ const Navbar = () => {
           <a href="/#about" class="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">About</a>
         </li>
         <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">Services</a>
+          <a href="/#skills" class="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">Skills</a>
         </li>
         <li>
           <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">Pricing</a>
