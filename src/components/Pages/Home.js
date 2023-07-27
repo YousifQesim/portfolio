@@ -107,7 +107,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.5 }}
-                className="xl:flex gap-1 absolute bottom-32 hidden"
+                className="xl:flex xl:items-center gap-1 absolute bottom-32 hidden"
               >
                 <AnimatedImage
                   src="/mouse.svg"
@@ -117,8 +117,18 @@ const Home = () => {
                 />
 
                 <p className="text-white text-xs font-medium">
-                  Scroll down to learn more
+                  Scroll down 
                 </p>
+                <span className="animate-bounce">
+
+                <AnimatedImage
+              
+              src="/down.svg"
+              alt="Mouse logo"
+              width={24}
+              height={24}
+              />
+              </span>
               </motion.div>
             </Link>
           </div>
@@ -132,7 +142,7 @@ const Home = () => {
             className="relative w-full md:w-4/5 mx-auto"
           >
             <AnimatedImage
-              src="/my.jpg"
+              src="/my.png"
               alt="Personal Image"
               width={270}
               height={270}
