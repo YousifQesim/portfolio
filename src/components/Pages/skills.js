@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import skillsData from "/skills.json";
 import { useEffect } from 'react';
+
 function Skills() {
   const { ref, inView } = useInView({ threshold: 0.5 });
   const controls = useAnimation();
@@ -26,23 +27,33 @@ function Skills() {
   }, [controls, inView]);
 
   return (
-    <div className="min-h-screen relative my-8" ref={ref} id='skills'>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className='my-8'
-        >
-          <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
+    <motion.div
+      initial="hidden"
+      animate={inView ? 'visible' : 'hidden'}
+      variants={{
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+      }}
+      className="min-h-screen relative my-8"
+      ref={ref}
+      id='skills'
+    >
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className='my-8'
+      >
+        <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
           Skills
-          </h1>
-          <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[27%] vsm:left-[30%] m:left-[34%] md:left-[40%] lg:left-[43%] xl:left-[45%] ">
+        </h1>
+        <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[27%] vsm:left-[30%] m:left-[34%] md:left-[40%] lg:left-[43%] xl:left-[45%] ">
           My Tech Stack
-          </h3>
-        </motion.div>
-      
+        </h3>
+      </motion.div>
+
       <div className="container mx-auto  flex justify-center items-center flex-col  ">
-        
+
         <motion.div
           className="grid md:grid-cols-4 grid-cols-3 gap-8 md:gap-x-20 gap-x-12"
           variants={containerVariants}
@@ -74,7 +85,7 @@ function Skills() {
           ))}
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
