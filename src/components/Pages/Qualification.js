@@ -16,22 +16,24 @@ export default function Qualification() {
   const [activeButton, setActiveButton] = useState('education');
 
   return (
-    <div id="Qualification" className="h-screen relative">
-          <main className="relative top-10">
+    <div id="Qualification" className="h-screen relative  w-full">
+          <main className="relative top-10  w-full">
         <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
         className='my-8'
       >
-        <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
+        <h1 className="lg:text-7xl text-4xl font-extrabold text-white text-center opacity-5 uppercase">
         Qualification
         </h1>
-        <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[27%] vsm:left-[30%] m:left-[34%] md:left-[40%] lg:left-[43%] xl:left-[45%] ">
-        My personal journey
+        <h3 className="text-xl font-extrabold text-white text-center absolute top-1 lg:top-6 left-[27%] vsm:left-[30%] m:left-[34%] md:left-[40%] lg:left-[43%] xl:left-[45%] ">
+         personal journey
         </h3>
       </motion.div>
-        <ul className="flex justify-center my-10">
+      <div className=" w-full">
+
+        <ul className="flex justify-center my-16 text-sm md:text-lg">
       <li>
       <button
           onClick={() => {
@@ -100,7 +102,7 @@ export default function Qualification() {
             alt="work logo"
             width={20}
             height={20}
-          />
+            />
             <Image
         className={`${activeButton === 'work' ? 'hidden' : 'inline'}`}
             src="/work.svg"
@@ -113,6 +115,7 @@ export default function Qualification() {
       </li>
     
     </ul>
+            </div>
         <div>
         {showEducationTimeline && <Timeline data={educationData} />}
         {showCertificationTimeline && <Timeline data={certificationData} />}

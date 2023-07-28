@@ -102,12 +102,18 @@ transform: rotate(-30deg);
 
   margin-right: auto;
   text-align: right;
+  position: relative;
+    right: 8px;
+
 }
 
 .timeline .timeline-item:nth-child(odd) .timeline-content {
 
   margin-left: auto;
   text-align: left;
+  position: relative;
+    left: 8px;
+
 }
 
 .timeline .timeline-item:nth-child(even) .timeline-icon {
