@@ -63,31 +63,6 @@ export default function Qualification() {
       </li>
       <li>
         <button
-          onClick={() => {setActiveButton('work');
-          setShowEducationTimeline(false);
-                setShowWorkTimeline(true);
-                setShowCertificationTimeline(false);}}
-          className={`mb-4 text-white py-2 px-4 flex gap-1 items-center ${activeButton === 'work' ? 'text-violet-600' : 'text-white'}`}
-        >
-          <Image
-        className={`${activeButton === 'work' ? 'inline' : 'hidden'}`}
-            src="/workViolet.svg"
-            alt="work logo"
-            width={20}
-            height={20}
-          />
-            <Image
-        className={`${activeButton === 'work' ? 'hidden' : 'inline'}`}
-            src="/work.svg"
-            alt="work logo"
-            width={20}
-            height={20}
-          />
-          Work
-        </button>
-      </li>
-      <li>
-        <button
           onClick={() => {setActiveButton('certification');
           setShowEducationTimeline(false);
                 setShowWorkTimeline(false);
@@ -111,11 +86,37 @@ export default function Qualification() {
           Certifications
         </button>
       </li>
+      <li>
+        <button
+          onClick={() => {setActiveButton('work');
+          setShowEducationTimeline(false);
+                setShowWorkTimeline(true);
+                setShowCertificationTimeline(false);}}
+          className={`mb-4 text-white py-2 px-4 flex gap-1 items-center ${activeButton === 'work' ? 'text-violet-600' : 'text-white'}`}
+        >
+          <Image
+        className={`${activeButton === 'work' ? 'inline' : 'hidden'}`}
+            src="/workViolet.svg"
+            alt="work logo"
+            width={20}
+            height={20}
+          />
+            <Image
+        className={`${activeButton === 'work' ? 'hidden' : 'inline'}`}
+            src="/work.svg"
+            alt="work logo"
+            width={20}
+            height={20}
+          />
+          Work
+        </button>
+      </li>
+    
     </ul>
         <div>
         {showEducationTimeline && <Timeline data={educationData} />}
-        {showWorkTimeline && <Timeline data={workData} />}
         {showCertificationTimeline && <Timeline data={certificationData} />}
+        {showWorkTimeline && <Timeline data={workData} />}
         </div>
       </main>
     </div>
