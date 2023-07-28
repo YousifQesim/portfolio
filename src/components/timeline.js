@@ -31,7 +31,7 @@ export default function Timeline({ data }) {
           <div className="timeline-content">
             <div className=" w-full">
               {item.url ? (
-                <Link href={item.url}>
+                <Link href={item.url} target="_blank">
                   <motion.h3
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
