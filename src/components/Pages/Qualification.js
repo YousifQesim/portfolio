@@ -33,8 +33,13 @@ export default function Qualification() {
       </motion.div>
         <ul className="flex justify-center relative bottom-6">
       <li>
-        <button
-          onClick={() => setActiveButton('education')}
+      <button
+          onClick={() => {
+            setShowEducationTimeline(true);
+            setShowWorkTimeline(false);
+            setShowCertificationTimeline(false);
+            setActiveButton('education');
+          }}
           className={`mb-4 text-white py-2 px-4 flex gap-1 items-center ${activeButton === 'education' ? 'text-violet-600' : 'text-white'}`}
         >
           <Image
@@ -58,7 +63,10 @@ export default function Qualification() {
       </li>
       <li>
         <button
-          onClick={() => setActiveButton('work')}
+          onClick={() => {setActiveButton('work');
+          setShowEducationTimeline(false);
+                setShowWorkTimeline(true);
+                setShowCertificationTimeline(false);}}
           className={`mb-4 text-white py-2 px-4 flex gap-1 items-center ${activeButton === 'work' ? 'text-violet-600' : 'text-white'}`}
         >
           <Image
@@ -80,7 +88,10 @@ export default function Qualification() {
       </li>
       <li>
         <button
-          onClick={() => setActiveButton('certification')}
+          onClick={() => {setActiveButton('certification');
+          setShowEducationTimeline(false);
+                setShowWorkTimeline(false);
+                setShowCertificationTimeline(true);}}
           className={`mb-4 text-white py-2 px-4 flex gap-1 items-center ${activeButton === 'certification' ? 'text-violet-600' : 'text-white'}`}
         >
             <Image
@@ -110,3 +121,6 @@ export default function Qualification() {
     </div>
   );
 }
+
+
+
