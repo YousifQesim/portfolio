@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const IndexPage = () => {
   const [typedText, setTypedText] = useState('');
-  const text = "Welcome to Yusif Qasim's Portfolio website, where the fusion of creativity and technology takes center stage.";
+  const text =
+    "Welcome to Yusif Qasim's Portfolio website, where the fusion of creativity and technology takes center stage.";
   const audio = new Audio('/keyboard-sound.mp3'); // Create a new audio object
 
   useEffect(() => {
@@ -14,14 +15,24 @@ const IndexPage = () => {
       if (currentIndex > text.length) {
         clearInterval(interval);
       } else {
+        audio.currentTime = 0; // Reset audio to the beginning before playing
         audio.play().catch(error => {
-          // Autoplay was prevented, so we need to handle it here
-          console.warn('Autoplay was prevented. Please interact with the page to enable audio playback.', error);
+          console.warn('Audio playback error.', error);
         });
       }
     }, 100); // Adjust the speed of typing here (in milliseconds)
-    return () => clearInterval(interval);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
+
+  const handleStartTyping = () => {
+    audio.currentTime = 0; // Reset audio to the beginning before playing
+    audio.play().catch(error => {
+      console.warn('Audio playback error.', error);
+    });
+  };
 
   return (
     <div className="flex justify-center items-center h-screen">
@@ -41,6 +52,9 @@ const IndexPage = () => {
           |
         </motion.span>
       </motion.div>
+      <button onClick={handleStartTyping} className="text-white mt-4 border border-white p-2 rounded-md">
+        Start Typing
+      </button>
     </div>
   );
 };
