@@ -15,6 +15,26 @@ export default function Qualification() {
   const [showCertificationTimeline, setShowCertificationTimeline] = useState(false);
   const [activeButton, setActiveButton] = useState('education');
 
+  const handleEducationClick = () => {
+    setShowEducationTimeline(true);
+    setShowWorkTimeline(false);
+    setShowCertificationTimeline(false);
+    setActiveButton('education');
+  };
+
+  const handleCertificationClick = () => {
+    setShowEducationTimeline(false);
+    setShowWorkTimeline(false);
+    setShowCertificationTimeline(true);
+    setActiveButton('certification');
+  };
+
+  const handleWorkClick = () => {
+    setShowEducationTimeline(false);
+    setShowWorkTimeline(true);
+    setShowCertificationTimeline(false);
+    setActiveButton('work');
+  };
   return (
     <div id="Qualification" className="h-screen relative  w-full">
           <main className="relative top-10  w-full">
@@ -36,13 +56,10 @@ export default function Qualification() {
         <ul className="flex justify-center my-16 text-sm md:text-lg">
       <li>
       <button
-          onClick={() => {
-            setShowEducationTimeline(true);
-            setShowWorkTimeline(false);
-            setShowCertificationTimeline(false);
-            setActiveButton('education');
-          }}
-          className={`mb-4 text-white py-2 px-4 flex gap-1 items-center ${activeButton === 'education' ? 'text-violet-600' : 'text-white'}`}
+         onClick={handleEducationClick}
+         className={`mb-4  py-2 px-4 flex gap-1 items-center ${
+          activeButton === 'education' ? 'text-violet-600' : 'text-white'
+        }`}
         >
           <Image
         className={`${activeButton === 'education' ? 'inline' : 'hidden'}`}
@@ -65,11 +82,8 @@ export default function Qualification() {
       </li>
       <li>
         <button
-          onClick={() => {setActiveButton('certification');
-          setShowEducationTimeline(false);
-                setShowWorkTimeline(false);
-                setShowCertificationTimeline(true);}}
-          className={`mb-4 text-white py-2 px-4 flex gap-1 items-center ${activeButton === 'certification' ? 'text-violet-600' : 'text-white'}`}
+         onClick={handleCertificationClick}
+          className={`mb-4  py-2 px-4 flex gap-1 items-center ${activeButton === 'certification' ? 'text-violet-600' : 'text-white'}`}
         >
             <Image
         className={`${activeButton === 'certification' ? 'inline' : 'hidden'}`}
@@ -90,11 +104,8 @@ export default function Qualification() {
       </li>
       <li>
         <button
-          onClick={() => {setActiveButton('work');
-          setShowEducationTimeline(false);
-                setShowWorkTimeline(true);
-                setShowCertificationTimeline(false);}}
-          className={`mb-4 text-white py-2 px-4 flex gap-1 items-center ${activeButton === 'work' ? 'text-violet-600' : 'text-white'}`}
+         onClick={handleWorkClick}
+          className={`mb-4  py-2 px-4 flex gap-1 items-center ${activeButton === 'work' ? 'text-violet-600' : 'text-white'}`}
         >
           <Image
         className={`${activeButton === 'work' ? 'inline' : 'hidden'}`}
