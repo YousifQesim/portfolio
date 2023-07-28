@@ -14,7 +14,8 @@ module.exports = {
       },
       colors: {
         textColor:'	#6e57e0',
-        grayColor:'#bcbac4'
+        grayColor:'#bcbac4',
+        timeColor:"#a19fad"
       },
       screens: {
         'vsm': '350px',

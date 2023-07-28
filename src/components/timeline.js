@@ -57,7 +57,7 @@ export default function Timeline({ data }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="timeline-subtitle text-white text-[12px] m:text-[14px] my-1"
+                className="timeline-subtitle text-grayColor text-[12px] m:text-[14px] my-1"
               >
                 {item.subtitle}
               </motion.h4>
@@ -65,7 +65,7 @@ export default function Timeline({ data }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                className="text-white text-[8px] m:text-[10px]"
+                className="text-timeColor text-[8px] m:text-[10px]"
               >
                 {item.date}
               </motion.p>
