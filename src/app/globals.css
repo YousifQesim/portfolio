@@ -53,20 +53,69 @@ transform: rotate(-30deg);
   overflow:hidden;
 }
 
-/* Change color of vertical line */
-.vertical-timeline::before {
-  --line-color: #6e57e0;
+/* timeline.css */
+.timeline {
+  position: relative;
 }
 
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #6e57e0;
+}
 
-.vertical-timeline--two-columns .vertical-timeline-element-icon {
-  width: 30px !important;
-  height: 31px !important;
-  left: 52% !important;
-  margin-left: -38px !important;
+.timeline .timeline-item {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline .timeline-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #6e57e0;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline .timeline-content {
+  width: 47%;
 
 }
-.vertical-timeline-element-icon {
-  border-color: red !important;
-  --tw-ring-offset-color: red !important;
+
+.timeline .timeline-item:nth-child(even) .timeline-content {
+
+  margin-right: auto;
+  text-align: right;
+}
+
+.timeline .timeline-item:nth-child(odd) .timeline-content {
+
+  margin-left: auto;
+  text-align: left;
+}
+
+.timeline .timeline-item:nth-child(even) .timeline-icon {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.timeline .timeline-item:nth-child(odd) .timeline-icon {
+  margin-right: auto;
+  margin-left: 0;
 }
