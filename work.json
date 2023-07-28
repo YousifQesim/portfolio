@@ -1,23 +1,8 @@
 [
   {
     "id": 1,
-    "title": "Job Title",
-    "subtitle": "Company Name",
-    "content": "Description of the job responsibilities.",
-    "date": "Month Year - Month Year"
-  },
-  {
-    "id": 2,
-    "title": "yusif",
-    "subtitle": "Company Name",
-    "content": "Description of the job responsibilities.",
-    "date": "Month Year - Month Year"
-  },
-  {
-    "id": 3,
-    "title": "Job Title",
-    "subtitle": "Company Name",
-    "content": "Description of the job responsibilities.",
-    "date": "Month Year - Month Year"
+    "title": "Full-Stack Web Developer",
+    "subtitle": "Twekll Company",
+    "date": "Jun 2023 - Aug 2023"
   }
 ]

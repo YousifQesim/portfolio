@@ -16,8 +16,8 @@ export default function Qualification() {
   const [activeButton, setActiveButton] = useState('education');
 
   return (
-    <div>
-          <main>
+    <div id="Qualification" className="h-screen relative">
+          <main className="relative top-10">
         <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -31,7 +31,7 @@ export default function Qualification() {
         My personal journey
         </h3>
       </motion.div>
-        <ul className="flex justify-center relative bottom-6">
+        <ul className="flex justify-center my-10">
       <li>
       <button
           onClick={() => {

@@ -1,23 +1,14 @@
 [
   {
     "id": 1,
-    "title": "Job Title",
-    "subtitle": "Company Name",
-    "content": "Description of the job responsibilities.",
-    "date": "Month Year - Month Year"
+    "title": "Software Engineering ",
+    "subtitle": "Koya University",
+    "date": "Nov 2020 - now"
   },
   {
     "id": 2,
-    "title": "Job Title",
-    "subtitle": "Company Name",
-    "content": "Description of the job responsibilities.",
-    "date": "Month Year - Month Year"
-  },
-  {
-    "id": 3,
-    "title": "Job Title",
-    "subtitle": "Company Name",
-    "content": "Description of the job responsibilities.",
-    "date": "Month Year - Month Year"
+    "title": "Frontend Design and Development",
+    "subtitle": "WeCode - Rwanga Foundation",
+    "date": "May 2022 - Sep 2022"
   }
 ]
