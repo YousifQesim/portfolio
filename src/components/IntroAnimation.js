@@ -11,8 +11,8 @@ const IndexPage = () => {
     const interval = setInterval(() => {
       setTypedText(text.slice(0, currentIndex));
       currentIndex++;
-      if (currentIndex === text.length) {
-        audio.pause();
+      if (currentIndex > text.length) {
+        clearInterval(interval);
       } else {
         audio.play().catch(error => {
           // Autoplay was prevented, so we need to handle it here
@@ -20,10 +20,7 @@ const IndexPage = () => {
         });
       }
     }, 100); // Adjust the speed of typing here (in milliseconds)
-    return () => {
-      clearInterval(interval);
-      audio.pause();
-    };
+    return () => clearInterval(interval);
   }, []);
 
   return (
