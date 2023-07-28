@@ -26,11 +26,11 @@ function DownloadButton({ children }) {
   return (
     <>
       {pdfUrl ? (
-        <a href={pdfUrl} download class="text-white bg-violet-600 hover:bg-violet-800 transition ease-in-out delay-10 duration-200 gap-2 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center ">
+        <a href={pdfUrl} download className="text-white bg-violet-600 hover:bg-violet-800 transition ease-in-out delay-10 duration-200 gap-2 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center ">
           {children}
         </a>
       ) : (
-        <button type="button" onClick={handleClick} disabled={isDownloading} class="text-white bg-violet-600 hover:bg-violet-800 transition ease-in-out delay-10 duration-200 gap-2 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center ">
+        <button type="button" onClick={handleClick} disabled={isDownloading} className="text-white bg-violet-600 hover:bg-violet-800 transition ease-in-out delay-10 duration-200 gap-2 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center ">
           {isDownloading ? <Spinner/> : children}
         </button>
       )}
