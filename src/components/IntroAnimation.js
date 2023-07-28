@@ -1,41 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const IndexPage = () => {
   const [typedText, setTypedText] = useState('');
   const text =
     "Welcome to Yusif Qasim's Portfolio website, where the fusion of creativity and technology takes center stage.";
-  const audio = new Audio('/keyboard-sound.mp3'); // Create a new audio object
+
+  // Add the audio source URL here
+  const audioURL = '/keyboard-sound.mp3';
+  let audio;
 
   useEffect(() => {
     let currentIndex = 0;
+    audio = new Audio(audioURL);
+
     const interval = setInterval(() => {
       setTypedText(text.slice(0, currentIndex));
       currentIndex++;
       if (currentIndex > text.length) {
         clearInterval(interval);
+        // Pause the audio when the typing animation is finished
+        audio.pause();
       } else {
-        audio.currentTime = 0; // Reset audio to the beginning before playing
-        audio.play().catch(error => {
-          console.warn('Audio playback error.', error);
-        });
+        // Play the audio when typing each character
+        audio.play();
       }
     }, 100); // Adjust the speed of typing here (in milliseconds)
 
     return () => {
       clearInterval(interval);
+      // Stop the audio and clean up when the component unmounts
+      audio.pause();
+      audio = null;
     };
   }, []);
 
-  const handleStartTyping = () => {
-    audio.currentTime = 0; // Reset audio to the beginning before playing
-    audio.play().catch(error => {
-      console.warn('Audio playback error.', error);
-    });
+  // Function to handle user interaction and start audio
+  const handleInteraction = () => {
+    if (audio) {
+      audio.play();
+    }
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div
+      className="flex justify-center items-center h-screen"
+      onClick={handleInteraction} // Add onClick to enable audio on user interaction
+    >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -52,9 +63,6 @@ const IndexPage = () => {
           |
         </motion.span>
       </motion.div>
-      <button onClick={handleStartTyping} className="text-white mt-4 border border-white p-2 rounded-md">
-        Start Typing
-      </button>
     </div>
   );
 };
