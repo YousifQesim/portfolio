@@ -10,8 +10,8 @@ import Timeline from '../timeline';
 import Image from "next/image";
 
 export default function Qualification() {
-  const [showEducationTimeline, setShowEducationTimeline] = useState(false);
-  const [showWorkTimeline, setShowWorkTimeline] = useState(true);
+  const [showEducationTimeline, setShowEducationTimeline] = useState(true);
+  const [showWorkTimeline, setShowWorkTimeline] = useState(false);
   const [showCertificationTimeline, setShowCertificationTimeline] = useState(false);
   const [activeButton, setActiveButton] = useState('education');
 
