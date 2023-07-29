@@ -1,29 +1,49 @@
-[
-  {
-    "id": 1,
-    "title": "Project One",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget sapien vel velit congue semper. Nullam quis mi non ante sollicitudin tempor ac id elit.",
-    "image": "/my.jpg",
-    "livePreview": "/my.jpg",
-    "github": "https://github.com/example/project1",
-    "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"]
-  },
-  {
-    "id": 2,
-    "title": "Project Two",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget sapien vel velit congue semper. Nullam quis mi non ante sollicitudin tempor ac id elit.",
-    "image": "/public/my.jpg",
-    "livePreview": "/public/my.jpg",
-    "github": "https://github.com/example/project2",
-    "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"]
-  },
-  {
-    "id": 3,
-    "title": "Project Three",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget sapien vel velit congue semper. Nullam quis mi non ante sollicitudin tempor ac id elit.",
-    "image": "/my.jpg",
-    "livePreview": "/my.jpg",
-    "github": "https://github.com/example/project3",
-    "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"]
-  }
-]
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Project 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image": "/my.jpg",
+      "technologies": ["React", "Tailwind CSS"],
+      "livePreview": "https://example.com",
+      "github": "https://github.com/example/project1"
+    },
+    {
+      "id": 2,
+      "title": "Project 2",
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/my.png",
+      "technologies": ["Next.js", "Framer Motion"],
+      "livePreview": "https://example.com",
+      "github": "https://github.com/example/project2"
+    },
+    {
+      "id": 3,
+      "title": "Project 3",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "/images/project3.jpg",
+      "technologies": ["Vue", "Bootstrap"],
+      "livePreview": "https://example.com",
+      "github": "https://github.com/example/project3"
+    },
+    {
+      "id": 4,
+      "title": "Project 4",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": "/images/project4.jpg",
+      "technologies": ["Node.js", "Express"],
+      "livePreview": "https://example.com",
+      "github": "https://github.com/example/project4"
+    },
+    {
+      "id": 5,
+      "title": "Project 5",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "/images/project5.jpg",
+      "technologies": ["React Native", "Firebase"],
+      "livePreview": "https://example.com",
+      "github": "https://github.com/example/project5"
+    }
+  ]
+}
