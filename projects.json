@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Project One",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget sapien vel velit congue semper. Nullam quis mi non ante sollicitudin tempor ac id elit.",
+    "image": "/my.jpg",
+    "livePreview": "/my.jpg",
+    "github": "https://github.com/example/project1",
+    "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"]
+  },
+  {
+    "id": 2,
+    "title": "Project Two",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget sapien vel velit congue semper. Nullam quis mi non ante sollicitudin tempor ac id elit.",
+    "image": "/public/my.jpg",
+    "livePreview": "/public/my.jpg",
+    "github": "https://github.com/example/project2",
+    "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"]
+  },
+  {
+    "id": 3,
+    "title": "Project Three",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget sapien vel velit congue semper. Nullam quis mi non ante sollicitudin tempor ac id elit.",
+    "image": "/my.jpg",
+    "livePreview": "/my.jpg",
+    "github": "https://github.com/example/project3",
+    "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"]
+  }
+]

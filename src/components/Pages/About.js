@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import NumberCounters from "../NumberCounters";
 import { useInView } from "react-intersection-observer";
+import VideoPopup from "../VideoPopUp";
 
 const DownloadButton = dynamic(() => import("../DownloadButton"), {
   ssr: false,
@@ -142,6 +143,18 @@ const About = () => {
                   />
                 </DownloadButton>
               </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 4, duration: 0.5 }}
+                className="flex justify-center"
+              >
+                
+        <VideoPopup videoUrl="/introvid.mp4" />
+    
+              </motion.div>
+
             </motion.div>
           </motion.div>
         </div>
