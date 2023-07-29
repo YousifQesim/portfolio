@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
+import Image from "next/image";
 
 const VideoPopup = ({ videoUrl }) => {
   const [showVideo, setShowVideo] = useState(false);
@@ -19,9 +20,16 @@ const VideoPopup = ({ videoUrl }) => {
     <div className="relative">
       <button
         onClick={handleOpen}
-        className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+        className="text-white bg-violet-600 hover:bg-violet-800 transition ease-in-out delay-10 duration-200 gap-2 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center"
       >
-        Play Video
+        Know Me By Video
+        <Image
+                    src="/click.svg"
+                    alt="click logo"
+                    width={20}
+                    height={20}
+                    priority
+                  />
       </button>
       {showVideo && (
         <motion.div

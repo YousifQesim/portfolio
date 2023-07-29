@@ -124,7 +124,7 @@ const About = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 3.5, duration: 0.5 }}
-              className="my-8"
+              className="my-8 flex gap-x-4 justify-center"
             >
               <motion.div
                 initial={{ opacity: 0 }}
@@ -152,6 +152,7 @@ const About = () => {
               >
                 
         <VideoPopup videoUrl="/introvid.mp4" />
+      
     
               </motion.div>
 
