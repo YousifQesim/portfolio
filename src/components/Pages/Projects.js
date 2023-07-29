@@ -2,17 +2,12 @@
 import { useState } from "react";
 import ProjectCard from "../ProjectCard";
 import projectsData from "/projects.json";
-import { ToastContainer,toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-// Your component code here
 
 const ProjectsPage = () => {
   const [numProjects, setNumProjects] = useState(3);
 
   const handleFilterChange = (event) => {
     setNumProjects(parseInt(event.target.value));
-    toast.success(`Check my GitHub for all projects.`);
   };
 
   const maxNumProjects = projectsData.projects.length;
@@ -25,6 +20,7 @@ const ProjectsPage = () => {
           See Projects:
         </label>
         <select
+        data-tooltip-target="tooltip-default" 
           id="filter"
           name="filter"
           value={numProjects}
@@ -37,13 +33,14 @@ const ProjectsPage = () => {
             </option>
           ))}
         </select>
+
+
       </div>
       <div className="flex flex-wrap -mx-4">
         {projectsData.projects.slice(0, numProjects).map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
-      <ToastContainer />
     </div>
   );
 };
