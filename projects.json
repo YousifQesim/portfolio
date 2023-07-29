@@ -2,48 +2,49 @@
   "projects": [
     {
       "id": 1,
-      "title": "Project 1",
+      "title": "Movies4Kurd",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "image": "/my.jpg",
-      "technologies": ["React", "Tailwind CSS"],
-      "livePreview": "https://example.com",
-      "github": "https://github.com/example/project1"
+      "image": "/movies4kurd.png",
+      "technologies": ["React", "Tailwind CSS","Firebase"],
+      "livePreview": "https://movies4kurd.netlify.app/",
+      "github": "https://github.com/YusifQasim/movies"
     },
     {
       "id": 2,
-      "title": "Project 2",
+      "title": "Weather4Kurd",
       "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "image": "/my.png",
-      "technologies": ["Next.js", "Framer Motion"],
-      "livePreview": "https://example.com",
-      "github": "https://github.com/example/project2"
+      "image": "/weather4kurd.png",
+      "technologies": ["React js", "Next js"],
+      "livePreview": "https://weather4kurd.netlify.app/",
+      "github": "https://github.com/YusifQasim/weather_app"
     },
     {
       "id": 3,
-      "title": "Project 3",
+      "title": "Chwarbarda Website",
       "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "image": "/images/project3.jpg",
-      "technologies": ["Vue", "Bootstrap"],
-      "livePreview": "https://example.com",
-      "github": "https://github.com/example/project3"
-    },
-    {
-      "id": 4,
-      "title": "Project 4",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "image": "/images/project4.jpg",
-      "technologies": ["Node.js", "Express"],
-      "livePreview": "https://example.com",
-      "github": "https://github.com/example/project4"
+      "image": "/chwarbardaa.png",
+      "technologies": ["Spring Boot","Thymeleaf"],
+      "livePreview": "https://chwarbarda.com/",
+      "github": "https://github.com/YusifQasim/chwarbarda"
     },
     {
       "id": 5,
-      "title": "Project 5",
+      "title": "Kurdish Food Restaurant",
       "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "image": "/images/project5.jpg",
-      "technologies": ["React Native", "Firebase"],
-      "livePreview": "https://example.com",
-      "github": "https://github.com/example/project5"
+      "image": "/kurdishFood.png",
+      "technologies": ["HTML", "CSS","JS"],
+      "livePreview": "https://kurdish-food-restaurant.netlify.app/",
+      "github": "https://github.com/YusifQasim/My-meal"
+    }
+    ,
+    {
+      "id": 6,
+      "title": "Kurdistan Region",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "/kurdistan.png",
+      "technologies": ["HTML", "CSS","JS"],
+      "livePreview": "https://kurdistan-region.netlify.app/",
+      "github": "https://github.com/YusifQasim/Kurdistan"
     }
   ]
 }

@@ -2,12 +2,17 @@
 import { useState } from "react";
 import ProjectCard from "../ProjectCard";
 import projectsData from "/projects.json";
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// Your component code here
 
 const ProjectsPage = () => {
   const [numProjects, setNumProjects] = useState(3);
 
   const handleFilterChange = (event) => {
     setNumProjects(parseInt(event.target.value));
+    toast.success(`Check my GitHub for all projects.`);
   };
 
   const maxNumProjects = projectsData.projects.length;
@@ -15,7 +20,7 @@ const ProjectsPage = () => {
   return (
     <div className="container mx-auto mt-8 px-4">
       <h1 className="text-4xl font-bold mb-8">My Projects</h1>
-      <div className="mb-8 bg-">
+      <div className="mb-8 ">
         <label htmlFor="filter" className="mr-4 text-white">
           See Projects:
         </label>
@@ -38,6 +43,7 @@ const ProjectsPage = () => {
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
+      <ToastContainer />
     </div>
   );
 };

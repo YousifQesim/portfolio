@@ -23,26 +23,27 @@ const ProjectCard = ({ project }) => {
         </div>
         <div className="p-4  ">
           <div className="flex flex-col items-start mb-4 gap-y-5">
-            <div className="flex border-2 w-full flex-wrap">
+            <div className="flex  w-full flex-wrap">
               {project.technologies.map((technology) => (
-                
                 <span
                   key={technology}
                   className=" text-white inline px-2 py-1 rounded-full mr-2"
                 >
-                 #{technology}
+                  #{technology}
                 </span>
               ))}
             </div>
             <div className="flex justify-center  w-full">
-              <a
-                href={project.livePreview}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-indigo-600 text-white px-4 py-2 rounded-full mx-2"
-              >
-                Live Preview
-              </a>
+              {project.livePreview ? (
+                <a
+                  href={project.livePreview}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-indigo-600 text-white px-4 py-2 rounded-full mx-2"
+                >
+                  Live Preview
+                </a>
+              ) : null}
               <a
                 href={project.github}
                 target="_blank"
