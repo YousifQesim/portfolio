@@ -36,7 +36,7 @@ const ProjectsPage = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="relative bottom-28 my-16"
         >
-          <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
+          <h1 className="md:text-7xl text-4xl font-extrabold text-white text-center opacity-5 uppercase">
             Portfolio
           </h1>
           <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[27%] vsm:left-[30%] m:left-[34%] md:left-[40%] lg:left-[43%] xl:left-[45%]">
