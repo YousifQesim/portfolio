@@ -5,7 +5,7 @@ const ProjectCard = ({ project }) => {
   return (
     <motion.div
       whileTap={{ scale: 0.95 }}
-      className="w-full md:w-1/2 lg:w-1/3 p-4 hover:cursor-pointer"
+      className="w-full md:w-3/4  p-4 hover:cursor-pointer"
     >
       <div className=" rounded-lg  overflow-hidden h-full bg-ProjectBackground shadow-sm box">
         <div className="relative" style={{ height: "400px" }}>
@@ -44,7 +44,7 @@ const ProjectCard = ({ project }) => {
                   rel="noopener noreferrer"
                   className="bg-indigo-600 text-white px-4 py-2 rounded-full mx-2"
                 >
-                  Live Preview
+                  Demo
                 </a>
               ) : null}
               <a

@@ -30,7 +30,7 @@ const Navbar = () => {
           <a href="/#Qualification" className="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">Qualification</a>
         </li>
         <li>
-          <a href="#" className="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">Contact</a>
+          <a href="/#portfolio" className="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">Portfolio</a>
         </li>
       </ul>
     </div>

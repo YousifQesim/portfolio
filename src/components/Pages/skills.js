@@ -48,7 +48,7 @@ function Skills() {
           Skills
         </h1>
         <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[27%] vsm:left-[30%] m:left-[34%] md:left-[40%] lg:left-[43%] xl:left-[45%] ">
-          My Tech Stack
+          Tech Stack
         </h3>
       </motion.div>
 
