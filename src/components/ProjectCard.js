@@ -15,7 +15,9 @@ const ProjectCard = ({ project }) => {
             layout="fill"
             objectFit="cover"
             quality={100}
+            loading="lazy"
           />
+          
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
             <h1 className="text-2xl font-bold mb-2">{project.title}</h1>
