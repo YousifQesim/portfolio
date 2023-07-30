@@ -67,6 +67,8 @@ export default function Qualification() {
             alt="education logo"
             width={20}
             height={20}
+            loading="eager"
+            priority={true}
           />
             <Image
         className={`${activeButton === 'education' ? 'hidden' : 'inline'}`}
@@ -74,6 +76,8 @@ export default function Qualification() {
             alt="education logo"
             width={20}
             height={20}
+            loading="eager"
+            priority={true}
           />
           
           
@@ -91,6 +95,8 @@ export default function Qualification() {
             alt="certification logo"
             width={20}
             height={20}
+            loading="eager"
+            priority={true}
           />
             <Image
         className={`${activeButton === 'certification' ? 'hidden' : 'inline'}`}
@@ -98,6 +104,8 @@ export default function Qualification() {
             alt="certification logo"
             width={20}
             height={20}
+            loading="eager"
+            priority={true}
           />
           Certifications
         </button>
@@ -113,6 +121,8 @@ export default function Qualification() {
             alt="work logo"
             width={20}
             height={20}
+            loading="eager"
+            priority={true}
             />
             <Image
         className={`${activeButton === 'work' ? 'hidden' : 'inline'}`}
@@ -120,6 +130,8 @@ export default function Qualification() {
             alt="work logo"
             width={20}
             height={20}
+            loading="eager"
+            priority={true}
           />
           Work
         </button>

@@ -28,7 +28,8 @@ const VideoPopup = ({ videoUrl }) => {
                     alt="click logo"
                     width={20}
                     height={20}
-                    priority
+                    loading="eager"
+                    priority={true}
                   />
       </button>
       {showVideo && (

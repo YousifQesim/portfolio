@@ -43,6 +43,8 @@ const Home = () => {
               alt="GitHub logo"
               width={24}
               height={24}
+              loading="eager"
+              priority={true}
             />
           </Link>
           <Link
@@ -55,6 +57,8 @@ const Home = () => {
               alt="Telegram logo"
               width={24}
               height={24}
+              loading="eager"
+              priority={true}
             />
           </Link>
         </div>
@@ -99,6 +103,8 @@ const Home = () => {
                   alt="Telegram logo"
                   width={20}
                   height={20}
+                  loading="eager"
+                  priority={true}
                 />
               </motion.button>
             </div>
@@ -115,6 +121,8 @@ const Home = () => {
                   alt="Mouse logo"
                   width={24}
                   height={24}
+                  loading="eager"
+                  priority={true}
                 />
 
                 <p className="text-white text-xs font-medium">
@@ -128,6 +136,8 @@ const Home = () => {
               alt="Mouse logo"
               width={24}
               height={24}
+              loading="eager"
+              priority={true}
               />
               </span>
               </motion.div>
@@ -147,6 +157,8 @@ const Home = () => {
               alt="Personal Image"
               width={270}
               height={270}
+              loading="eager"
+              priority={true}
             />
           </motion.div>
         </div>

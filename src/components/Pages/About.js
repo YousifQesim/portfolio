@@ -73,7 +73,8 @@ const About = () => {
               alt="Next.js Logo"
               width={400}
               height={400}
-              priority
+              loading="eager"
+              priority={true}
             />
           </motion.div>
 
@@ -139,7 +140,8 @@ const About = () => {
                     alt="telegram logo"
                     width={20}
                     height={20}
-                    priority
+                    loading="eager"
+                    priority={true}
                   />
                 </DownloadButton>
               </motion.div>
