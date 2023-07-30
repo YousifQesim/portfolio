@@ -5,10 +5,10 @@ const ProjectCard = ({ project }) => {
   return (
     <motion.div
       whileTap={{ scale: 0.95 }}
-      className="w-full md:w-3/4  p-4 hover:cursor-pointer"
+      className="w-full md:w-3/4 mx-auto my-0 p-4 hover:cursor-pointer"
     >
         <div className=" items-center w-full text-center">
-            <h1 className="text-2xl font-bold mb-2   text-indigo-800">{project.title}</h1>
+            <h1 className="text-3xl font-extrabold mb-2 text-indigo-600 opacity-70">{project.title}</h1>
           </div>
       <div className=" rounded-lg  overflow-hidden h-full bg-ProjectBackground shadow-sm box">
       
