@@ -7,7 +7,11 @@ const ProjectCard = ({ project }) => {
       whileTap={{ scale: 0.95 }}
       className="w-full md:w-3/4  p-4 hover:cursor-pointer"
     >
+        <div className=" items-center w-full text-center">
+            <h1 className="text-2xl font-bold mb-2   text-indigo-800">{project.title}</h1>
+          </div>
       <div className=" rounded-lg  overflow-hidden h-full bg-ProjectBackground shadow-sm box">
+      
         <div className="relative  " style={{ height: "400px" }}>
           <Image
             src={project.image}
@@ -19,14 +23,14 @@ const ProjectCard = ({ project }) => {
             priority={true}
           />
           
-          <div className="absolute inset-0 bg-black bg-opacity-50" />
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-            <h1 className="text-2xl font-bold mb-2">{project.title}</h1>
-          </div>
+          <div className="absolute inset-0 bg-black bg-opacity-60" />
+        
         </div>
         <div className="p-4  ">
+      
           <div className="flex flex-col items-start mb-4 gap-y-5">
             <div className="flex  w-full flex-wrap">
+        
               {project.technologies.map((technology) => (
                 <span
                   key={technology}
@@ -73,6 +77,7 @@ const ProjectCard = ({ project }) => {
             />
               </a>
             </div>
+            
           </div>
         </div>
       </div>
