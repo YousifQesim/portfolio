@@ -8,7 +8,7 @@ const ProjectCard = ({ project }) => {
       className="w-full md:w-3/4  p-4 hover:cursor-pointer"
     >
       <div className=" rounded-lg  overflow-hidden h-full bg-ProjectBackground shadow-sm box">
-        <div className="relative" style={{ height: "400px" }}>
+        <div className="relative  " style={{ height: "400px" }}>
           <Image
             src={project.image}
             alt={project.title}
@@ -42,18 +42,35 @@ const ProjectCard = ({ project }) => {
                   href={project.livePreview}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-indigo-600 text-white px-4 py-2 rounded-full mx-2"
+                  className="bg-indigo-600 text-white px-4 py-2 rounded-full mx-2 flex gap-x-1 "
                 >
                   Demo
+                  <Image
+              src="/click.svg"
+              alt="GitHub logo"
+              width={20}
+              height={20}
+              loading="eager"
+              priority={true}
+            />
+                
                 </a>
               ) : null}
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black text-white px-4 py-2 rounded-full mx-2"
+                className="bg-black text-white px-4 py-2 rounded-full mx-2 flex gap-x-1"
               >
                 GitHub
+                <Image
+              src="/githubwhite.svg"
+              alt="GitHub logo"
+              width={24}
+              height={24}
+              loading="eager"
+              priority={true}
+            />
               </a>
             </div>
           </div>
