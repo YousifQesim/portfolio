@@ -15,7 +15,8 @@ const ProjectCard = ({ project }) => {
             layout="fill"
             objectFit="cover"
             quality={100}
-            loading="lazy"
+            loading="eager"
+            priority={true}
           />
           
           <div className="absolute inset-0 bg-black bg-opacity-50" />
