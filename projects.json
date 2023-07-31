@@ -5,7 +5,7 @@
       "title": "Movies4Kurd",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "image": "/movies4kurd.png",
-      "technologies": ["React", "Tailwind CSS","Firebase"],
+      "technologies": ["React", "Tailwind","Firebase"],
       "livePreview": "https://movies4kurd.netlify.app/",
       "github": "https://github.com/YusifQasim/movies"
     },

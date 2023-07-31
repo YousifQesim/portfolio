@@ -5,7 +5,7 @@ const ProjectCard = ({ project }) => {
   return (
     <motion.div
       whileTap={{ scale: 0.95 }}
-      className="w-full md:w-3/4 mx-auto  md:mt-24 p-4 hover:cursor-pointer"
+      className="w-full md:w-3/4 mx-auto   md:mt-24 p-4 hover:cursor-pointer"
     >
         <div className=" items-center w-full text-center">
             <h1 className="md:text-3xl text-xl font-extrabold mb-2 text-indigo-600 opacity-70">{project.title}</h1>
@@ -28,13 +28,13 @@ const ProjectCard = ({ project }) => {
         </div>
         <div className="p-4  ">
       
-          <div className="flex flex-col items-start mb-4 gap-y-5">
+          <div className="flex flex-col items-start mb-4 gap-y-5 w-full">
             <div className="flex  w-full flex-wrap">
         
               {project.technologies.map((technology) => (
                 <span
                   key={technology}
-                  className=" text-white inline px-2 py-1 rounded-full mr-2"
+                  className=" text-white inline px-2 py-1 rounded-full mr-2 text-sm md:text-lg"
                 >
                   #{technology}
                 </span>
@@ -56,7 +56,7 @@ const ProjectCard = ({ project }) => {
               height={20}
               loading="eager"
               priority={true}
-            />
+             />
                 
                 </a>
               ) : null}
@@ -74,7 +74,7 @@ const ProjectCard = ({ project }) => {
               height={24}
               loading="eager"
               priority={true}
-            />
+             />
               </a>
             </div>
             
