@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-aria/button": "^3.8.0",
+    "@react-aria/focus": "^3.13.0",
+    "@react-aria/utils": "^3.18.0",
     "autoprefixer": "10.4.14",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.10",

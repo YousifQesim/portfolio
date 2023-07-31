@@ -1,43 +1,314 @@
-import Link from "next/link";
+"use client"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("/#");
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+const handleMenuItemClick = (link, event) => {
+  event.preventDefault(); // Prevent page refresh
+
+  setIsMenuOpen(false);
+  setActiveLink(link);
+};
+
   return (
+    <nav className="bg-transparent relative">
+      {/* Mobile menu items */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden fixed bottom-0 left-0 right-0"
+          >
+            <ul className="font-medium text-lg flex justify-start items-center gap-8 min-h-48 flex-wrap w-full p-4 md:p-0 bg-ProjectBackground shadow-lg shadow-indigo-600">
+              <li>
+                <motion.a
+                  href="/"
+                  className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
+                    activeLink === "/#" ? "text-violet-600" : "text-white"
+                  }`}
+                  onClick={() => handleMenuItemClick("/")}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <motion.div
+                    className={`${activeLink === "/#" ? "block" : "hidden"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/homeindigo.svg"
+                      alt="home logo"
+                      width={24}
+                      height={24}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  <motion.div
+                    className={`${activeLink === "/#" ? "hidden" : "block"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/home.svg"
+                      alt="home logo"
+                      width={24}
+                      height={24}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  Home
+                </motion.a>
+              </li>
+              <li>
+                <motion.a
+                  href="/#about"
+                  className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
+                    activeLink === "/#about" ? "text-violet-600" : "text-white"
+                  }`}
+                  onClick={() => handleMenuItemClick("/#about")}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <motion.div
+                    className={`${activeLink === "/#about" ? "block" : "hidden"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/aboutindigo.svg"
+                      alt="about logo"
+                      width={24}
+                      height={24}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  <motion.div
+                    className={`${activeLink === "/#about" ? "hidden" : "block"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/about.svg"
+                      alt="about logo"
+                      width={24}
+                      height={24}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  About
+                </motion.a>
+              </li>
+              <li>
+                <motion.a
+                  href="/#skills"
+                  className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
+                    activeLink === "/#skills" ? "text-indigo-600" : "text-white"
+                  }`}
+                  onClick={() => handleMenuItemClick("/#skills")}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <motion.div
+                    className={`${activeLink === "/#skills" ? "block" : "hidden"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/skillindigo.svg"
+                      alt="skill logo"
+                      width={24}
+                      height={24}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  <motion.div
+                    className={`${activeLink === "/#skills" ? "hidden" : "block"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/skill.svg"
+                      alt="skill logo"
+                      width={24}
+                      height={24}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  Skills
+                </motion.a>
+              </li>
+              <li>
+                <motion.a
+                  href="/#Qualification"
+                  className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
+                    activeLink === "/#Qualification" ? "text-violet-600" : "text-white"
+                  }`}
+                  onClick={() => handleMenuItemClick("/#Qualification")}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <motion.div
+                    className={`${activeLink === "/#Qualification" ? "block" : "hidden"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/educationViolet.svg"
+                      alt="education logo"
+                      width={24}
+                      height={24}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  <motion.div
+                    className={`${activeLink === "/#Qualification" ? "hidden" : "block"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/education.svg"
+                      alt="education logo"
+                      width={24}
+                      height={24}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  Qualification
+                </motion.a>
+              </li>
+              <li>
+                <motion.a
+                  href="/#portfolio"
+                  className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
+                    activeLink === "/#portfolio" ? "text-violet-600" : "text-white"
+                  }`}
+                  onClick={() => handleMenuItemClick("/#portfolio")}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <motion.div
+                    className={`${activeLink === "/#portfolio" ? "block" : "hidden"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/workViolet.svg"
+                      alt="work logo"
+                      width={24}
+                      height={24}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  <motion.div
+                    className={`${activeLink === "/#portfolio" ? "hidden" : "block"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/work.svg"
+                      alt="work logo"
+                      width={24}
+                      height={24}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  Portfolio
+                </motion.a>
+              </li>
+              <button onClick={toggleMenu}>
+                <Image
+                  className="absolute right-8 bottom-6"
+                  src="/close.svg"
+                  alt="close logo"
+                  width={24}
+                  height={24}
+                  loading="eager"
+                  priority={true}
+                />
+              </button>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-<nav className="bg-transparent mt-4  ">
-  <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="/" className="flex items-center">
-        <span className="self-center text-2xl font-semibold whitespace-nowrap text-white hover:text-textColor">Yusif Qasim</span>
-    </a>
-    <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+      {/* Menu items for larger screens */}
+      <div
+        className={`${
+          isMenuOpen ? "hidden" : "flex"
+        } items-center justify-between md:flex md:space-x-8 mx-auto max-w-screen-xl hidden p-4`}
+        id="navbar-default"
+      >
+        {/* Your existing code for larger screens */}
+      </div>
+
+      {/* Mobile menu button */}
+      <motion.button
+        type="button"
+        className={`md:hidden w-full p-4 text-center h-16 bg-ProjectBackground shadow-lg shadow-indigo-600 text-white fixed bottom-0 right-0 ${
+          isMenuOpen ? "hidden rotate-90" : "flex flex-col"
+        }`}
+        aria-controls="navbar-default"
+        aria-expanded={isMenuOpen}
+        onClick={toggleMenu}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3 }}
+      >
         <span className="sr-only">Open main menu</span>
-        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-    <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul className="font-medium text-lg  flex flex-col p-4 md:p-0 mt-4 border rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
-        <li>
-          <a href="" className="block py-2 pl-3 pr-4  rounded md:bg-transparent text-textColor md:p-0  " aria-current="page">Home</a>
-        </li>
-        {/* df */}
-        <li>
-          <a href="/#about" className="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">About</a>
-        </li>
-        <li>
-          <a href="/#skills" className="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">Skills</a>
-        </li>
-        <li>
-          <a href="/#Qualification" className="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">Qualification</a>
-        </li>
-        <li>
-          <a href="/#portfolio" className="block py-2 pl-3 pr-4 text-white hover:text-textColor md:border-0  md:p-0 ">Portfolio</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+        <div className="absolute right-8 top-4">
+          <Image
+            src="/menu.svg"
+            alt="menu logo"
+            width={24}
+            height={24}
+            loading="eager"
+            priority={true}
+          />
+        </div>
+      </motion.button>
+    </nav>
   );
-}
+};
 
 export default Navbar;
+

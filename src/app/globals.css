@@ -4,6 +4,8 @@
 
 *{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   font-family: "Poppins", Arial, sans-serif;
@@ -128,4 +130,11 @@ transform: rotate(-30deg);
 
 .box{
 box-shadow: rgba(79, 77, 180, 0.2) 0px 10px 36px 0px, rgba(151, 87, 208, 0.06) 0px 0px 0px 1px;
+}
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; /* set a high z-index to ensure it appears on top of other elements */
+  background-color: hsl(250, 28%, 12%) !important;
 }
