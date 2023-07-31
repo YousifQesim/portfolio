@@ -4,7 +4,7 @@ import About from "@/components/Pages/About";
 import Skills from "@/components/Pages/skills";
 import Qualification from "@/components/Pages/Qualification";
 import Projects from "@/components/Pages/Projects";
-import Contact from "@/components/Pages/contact";
+import ContactMe from "@/components/Pages/ContactMe";
 const HomePage = () => {
 
   return (
@@ -17,7 +17,7 @@ const HomePage = () => {
       <Skills/>
       <Qualification/>
 <Projects/>
-     <Contact/>
+  <ContactMe/>
       </div>
       
     </div>
