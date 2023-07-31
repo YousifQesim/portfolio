@@ -34,7 +34,7 @@ function Skills() {
         visible: { opacity: 1 },
         hidden: { opacity: 0 },
       }}
-      className="min-h-screen relative my-8 border"
+      className="min-h-screen relative my-8 "
       ref={ref}
       id='skills'
     >

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "../ProjectCard";
@@ -6,29 +6,32 @@ import projectsData from "/projects.json";
 
 const ProjectsPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [direction, setDirection] = useState(1);
-
-  
 
   const handleCarouselPrev = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 0 ? projectsData.projects.length - 1 : prevSlide - 1));
-    setDirection(-1);
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? projectsData.projects.length - 1 : prevSlide - 1
+    );
   };
 
   const handleCarouselNext = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === projectsData.projects.length - 1 ? 0 : prevSlide + 1));
-    setDirection(1);
+    setCurrentSlide((prevSlide) =>
+      prevSlide === projectsData.projects.length - 1 ? 0 : prevSlide + 1
+    );
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     handleCarouselNext();
-  //   }, 5000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleCarouselNext();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="min-h-screen container mx-auto relative px-4 flex flex-col  " id="portfolio" style={{ overflow: "auto" }}>
+    <div
+      className="min-h-screen container mx-auto relative px-4 flex flex-col"
+      id="portfolio"
+      style={{ overflow: "auto" }}
+    >
       <div className="absolute top-16 w-full left-0">
         <motion.div
           initial={{ opacity: 0 }}
@@ -44,25 +47,26 @@ const ProjectsPage = () => {
           </h3>
         </motion.div>
         <motion.div
-          className="relative h-auto top-32 "
+          className="relative h-auto top-32"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="absolute inset-0 "
+            className="absolute inset-0"
             key={currentSlide}
-            custom={direction}
-            initial={{ x: direction > 0 ? "-20%" : "100%", opacity: 0 }}
+            initial={{ x: "-20%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: direction > 0 ? "100%" : "-100%", opacity: 0 }}
+            exit={{ x: "100%", opacity: 0 }}
             transition={{ duration: 0.8 }}
           >
             {projectsData.projects.map((project, index) => (
               <motion.div
                 key={project.id}
-                className={`w-full h-full flex-shrink-0 ${index === currentSlide ? "" : "hidden"}`}
+                className={`w-full h-full flex-shrink-0 ${
+                  index === currentSlide ? "" : "hidden"
+                }`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -74,6 +78,8 @@ const ProjectsPage = () => {
               </motion.div>
             ))}
           </motion.div>
+          <div className="opacity-0 md:opacity-100">
+
           <motion.button
             type="button"
             className="absolute top-1/2 left-4 z-30 flex items-center justify-center h-12 w-12 rounded-full dark:bg-gray-800/30 group hover:bg-indigo-600 dark:group-hover:bg-gray-800/60 focus:ring-4 focus:ring-white dark:focus:ring-gray-800/70 focus:outline-none border-2 border-indigo-600"
@@ -88,7 +94,12 @@ const ProjectsPage = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </motion.button>
           <motion.button
@@ -105,9 +116,28 @@ const ProjectsPage = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </motion.button>
+            </div>
+
+          {/* Circle buttons */}
+          <div className="absolute -bottom-64 md:-bottom-96  left-1/2  transform -translate-x-1/2 flex gap-2 ">
+            {projectsData.projects.map((project, index) => (
+              <button
+                key={project.id}
+                className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
+                  index === currentSlide ? "bg-indigo-600" : "bg-gray-300"
+                }`}
+                onClick={() => setCurrentSlide(index)}
+              />
+            ))}
+          </div>
         </motion.div>
       </div>
     </div>
