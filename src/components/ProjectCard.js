@@ -8,7 +8,7 @@ const ProjectCard = ({ project }) => {
       className="w-full md:w-3/4 mx-auto   md:mt-24 p-4 hover:cursor-pointer"
     >
         <div className=" items-center w-full text-center">
-            <h1 className="md:text-3xl text-xl font-extrabold mb-2 text-indigo-600 opacity-70">{project.title}</h1>
+            <h1 className="md:text-3xl text-xl font-extrabold mb-2 text-violet-600 opacity-70">{project.title}</h1>
           </div>
       <div className=" rounded-lg  overflow-hidden h-full bg-ProjectBackground shadow-sm box">
       
@@ -46,7 +46,7 @@ const ProjectCard = ({ project }) => {
                   href={project.livePreview}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-indigo-600 text-white px-4 py-2 rounded-full mx-2 flex gap-x-1 "
+                  className="bg-violet-600 text-white px-4 py-2 rounded-full mx-2 flex gap-x-1 "
                 >
                   Demo
                   <Image
