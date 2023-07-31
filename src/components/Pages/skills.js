@@ -47,12 +47,12 @@ function Skills() {
         <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
           Skills
         </h1>
-        <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[27%] vsm:left-[30%] m:left-[34%] md:left-[40%] lg:left-[43%] xl:left-[45%] ">
+        <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[33%] vsm:left-[36%] m:left-[38%] md:left-[43%] lg:left-[45%] xl:left-[46%] ">
           Tech Stack
         </h3>
       </motion.div>
 
-      <div className="container flex justify-center items-center flex-col  ">
+      <div className=" flex justify-center items-center flex-col w-full   ">
 
         <motion.div
           className="grid md:grid-cols-4 grid-cols-3 gap-8 md:gap-x-20 gap-x-10"

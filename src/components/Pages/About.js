@@ -95,8 +95,8 @@ const About = () => {
             <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
               About me
             </h1>
-            <h3 className="text-xl font-extrabold text-white text-center absolute top-6 lg:right-[30%] xl:right-[38%] ">
-Introduction
+            <h3 className="text-xl font-extrabold text-white text-center absolute top-6 lg:right-[30%] xl:right-[42%] ">
+               Introduction
             </h3>
         
           </motion.div>

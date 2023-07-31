@@ -10,12 +10,11 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-const handleMenuItemClick = (link, event) => {
-  event.preventDefault(); // Prevent page refresh
 
-  setIsMenuOpen(false);
-  setActiveLink(link);
-};
+  const handleMenuItemClick = (link) => {
+    setIsMenuOpen(false);
+    setActiveLink(link);
+  };
 
   return (
     <nav className="bg-transparent relative">
@@ -29,14 +28,14 @@ const handleMenuItemClick = (link, event) => {
             transition={{ duration: 0.3 }}
             className="md:hidden fixed bottom-0 left-0 right-0"
           >
-            <ul className="font-medium text-lg flex justify-start items-center gap-8 min-h-48 flex-wrap w-full p-4 md:p-0 bg-ProjectBackground shadow-lg shadow-indigo-600">
-              <li>
+            <ul className="font-medium text-xs flex justify-center items-center gap-8 min-h-48 flex-wrap w-full p-4 md:p-0 bg-ProjectBackground shadow-lg shadow-indigo-600">
+            <li>
                 <motion.a
-                  href="/"
+                  href="/#"
                   className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
                     activeLink === "/#" ? "text-violet-600" : "text-white"
                   }`}
-                  onClick={() => handleMenuItemClick("/")}
+                  onClick={() => handleMenuItemClick("/#")}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
@@ -50,9 +49,9 @@ const handleMenuItemClick = (link, event) => {
                   >
                     <Image
                       src="/homeindigo.svg"
-                      alt="home logo"
-                      width={24}
-                      height={24}
+                      alt="about logo"
+                      width={18}
+                      height={18}
                       loading="eager"
                       priority={true}
                     />
@@ -65,14 +64,14 @@ const handleMenuItemClick = (link, event) => {
                   >
                     <Image
                       src="/home.svg"
-                      alt="home logo"
-                      width={24}
-                      height={24}
+                      alt="about logo"
+                      width={18}
+                      height={18}
                       loading="eager"
                       priority={true}
                     />
                   </motion.div>
-                  Home
+                  Home 
                 </motion.a>
               </li>
               <li>
@@ -96,8 +95,8 @@ const handleMenuItemClick = (link, event) => {
                     <Image
                       src="/aboutindigo.svg"
                       alt="about logo"
-                      width={24}
-                      height={24}
+                      width={18}
+                      height={18}
                       loading="eager"
                       priority={true}
                     />
@@ -111,8 +110,8 @@ const handleMenuItemClick = (link, event) => {
                     <Image
                       src="/about.svg"
                       alt="about logo"
-                      width={24}
-                      height={24}
+                      width={18}
+                      height={18}
                       loading="eager"
                       priority={true}
                     />
@@ -124,7 +123,7 @@ const handleMenuItemClick = (link, event) => {
                 <motion.a
                   href="/#skills"
                   className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
-                    activeLink === "/#skills" ? "text-indigo-600" : "text-white"
+                    activeLink === "/#skills" ? "text-violet-600" : "text-white"
                   }`}
                   onClick={() => handleMenuItemClick("/#skills")}
                   initial={{ opacity: 0, x: -20 }}
@@ -141,8 +140,8 @@ const handleMenuItemClick = (link, event) => {
                     <Image
                       src="/skillindigo.svg"
                       alt="skill logo"
-                      width={24}
-                      height={24}
+                      width={18}
+                      height={18}
                       loading="eager"
                       priority={true}
                     />
@@ -156,8 +155,8 @@ const handleMenuItemClick = (link, event) => {
                     <Image
                       src="/skill.svg"
                       alt="skill logo"
-                      width={24}
-                      height={24}
+                      width={18}
+                      height={18}
                       loading="eager"
                       priority={true}
                     />
@@ -186,8 +185,8 @@ const handleMenuItemClick = (link, event) => {
                     <Image
                       src="/educationViolet.svg"
                       alt="education logo"
-                      width={24}
-                      height={24}
+                      width={18}
+                      height={18}
                       loading="eager"
                       priority={true}
                     />
@@ -201,8 +200,8 @@ const handleMenuItemClick = (link, event) => {
                     <Image
                       src="/education.svg"
                       alt="education logo"
-                      width={24}
-                      height={24}
+                      width={18}
+                  height={18}
                       loading="eager"
                       priority={true}
                     />
@@ -231,8 +230,8 @@ const handleMenuItemClick = (link, event) => {
                     <Image
                       src="/workViolet.svg"
                       alt="work logo"
-                      width={24}
-                      height={24}
+                      width={18}
+                      height={18}
                       loading="eager"
                       priority={true}
                     />
@@ -246,8 +245,8 @@ const handleMenuItemClick = (link, event) => {
                     <Image
                       src="/work.svg"
                       alt="work logo"
-                      width={24}
-                      height={24}
+                      width={18}
+                      height={18}
                       loading="eager"
                       priority={true}
                     />
@@ -260,8 +259,8 @@ const handleMenuItemClick = (link, event) => {
                   className="absolute right-8 bottom-6"
                   src="/close.svg"
                   alt="close logo"
-                  width={24}
-                  height={24}
+                  width={18}
+                  height={18}
                   loading="eager"
                   priority={true}
                 />
@@ -299,8 +298,8 @@ const handleMenuItemClick = (link, event) => {
           <Image
             src="/menu.svg"
             alt="menu logo"
-            width={24}
-            height={24}
+            width={18}
+            height={18}
             loading="eager"
             priority={true}
           />

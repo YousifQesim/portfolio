@@ -30,8 +30,8 @@ const ProjectsPage = () => {
     <div className="min-h-screen container mx-auto relative px-4 flex flex-col" id="portfolio" style={{ overflow: "auto" }}>
       <div className="absolute top-16 w-full left-0">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2, duration: 0.5 }} className="relative bottom-28 my-16">
-          <h1 className="md:text-7xl text-4xl font-extrabold text-white text-center opacity-5 uppercase">Portfolio</h1>
-          <h3 className="text-xl font-extrabold text-white text-center absolute top-6 left-[27%] vsm:left-[30%] m:left-[34%] md:left-[40%] lg:left-[43%] xl:left-[45%]">Recent Work</h3>
+          <h1 className="md:text-7xl text-5xl font-extrabold text-white text-center opacity-5 uppercase">Portfolio</h1>
+          <h3 className="text-xl font-extrabold text-white text-center absolute top-3 md:top-6 left-[27%] vsm:left-[30%] m:left-[34%] md:left-[40%] lg:left-[43%] xl:left-[45%]">Recent Work</h3>
         </motion.div>
         <motion.div className="relative h-auto top-32" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.8 }}>
           <motion.div className="absolute inset-0" key={currentSlide} initial={{ x: "-20%", opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: "100%", opacity: 0 }} transition={{ duration: 0.8 }}>
