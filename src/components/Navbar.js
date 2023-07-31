@@ -277,13 +277,86 @@ const Navbar = () => {
         } items-center justify-between md:flex md:space-x-8 mx-auto max-w-screen-xl hidden p-4`}
         id="navbar-default"
       >
-        {/* Your existing code for larger screens */}
+           <div
+        className={`${
+          isMenuOpen ? 'hidden' : 'flex'
+        } items-center justify-between w-full md:flex md:space-x-8 mx-auto max-w-screen-xl hidden  p-4`}
+        id="navbar-default"
+      >
+        <div className="flex items-center">
+          <span className="text-2xl font-semibold text-white hover:text-violet-600 cursor-pointer">
+            Yusif Qasim
+          </span>
+        </div>
+        <ul className="font-medium text-sm flex space-x-8 ">
+          <li>
+            <a
+              className={`${
+                activeLink === '/#'? 'text-violet-600'
+                : 'text-white'
+              
+              }`}
+              aria-current="page"
+              href="/#"
+            >
+            
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              className={`${
+                activeLink === '/#about'    ? 'text-violet-600'
+                : 'text-white'
+              }`}
+              href="/#about"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              className={`${
+                activeLink === '/#skills'    ? 'text-violet-600'
+                : 'text-white'
+              }`}
+              href="/#skills"
+            >
+              Skills
+            </a>
+          </li>
+          <li>
+            <a
+              className={`${
+                activeLink === '/#Qualification'
+                ? 'text-violet-600'
+                : 'text-white'
+              }`}
+              href="/#Qualification"
+            >
+              Qualification
+            </a>
+          </li>
+          <li>
+            <a
+              className={`${
+                activeLink === '/#portfolio'
+                  ? 'text-violet-600'
+                  : 'text-white'
+              }`}
+              href="/#portfolio"
+            >
+              Portfolio
+            </a>
+          </li>
+        </ul>
+      </div>
       </div>
 
       {/* Mobile menu button */}
       <motion.button
         type="button"
-        className={`md:hidden w-full p-4 text-center h-16 bg-ProjectBackground shadow-lg shadow-indigo-600 text-white fixed bottom-0 right-0 ${
+        className={`md:hidden w-full p-4 text-center h-16 bg-ProjectBackground shadow-lg shadow-violet-600 text-white fixed bottom-0 right-0 ${
           isMenuOpen ? "hidden rotate-90" : "flex flex-col"
         }`}
         aria-controls="navbar-default"

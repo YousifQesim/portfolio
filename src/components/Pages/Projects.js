@@ -27,7 +27,7 @@ const ProjectsPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen container mx-auto relative px-4 flex flex-col" id="portfolio" style={{ overflow: "auto" }}>
+    <div className="min-h-screen container mx-auto my-8 relative px-4 flex flex-col" id="portfolio" style={{ overflow: "auto" }}>
       <div className="absolute top-16 w-full left-0">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2, duration: 0.5 }} className="relative bottom-28 my-16">
           <h1 className="md:text-7xl text-5xl font-extrabold text-white text-center opacity-5 uppercase">Portfolio</h1>
