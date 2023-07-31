@@ -20,16 +20,16 @@ const ProjectsPage = () => {
     setDirection(1);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleCarouselNext();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     handleCarouselNext();
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
-    <div className="h-screen container mx-auto relative px-4 flex flex-col" id="portfolio">
-      <div className="absolute top-16 w-full">
+    <div className="min-h-screen container mx-auto relative px-4 flex flex-col  " id="portfolio" style={{ overflow: "auto" }}>
+      <div className="absolute top-16 w-full left-0">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -44,7 +44,7 @@ const ProjectsPage = () => {
           </h3>
         </motion.div>
         <motion.div
-          className="relative h-96 "
+          className="relative h-auto top-32 "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

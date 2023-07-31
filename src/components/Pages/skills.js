@@ -34,7 +34,7 @@ function Skills() {
         visible: { opacity: 1 },
         hidden: { opacity: 0 },
       }}
-      className="min-h-screen relative my-8"
+      className="min-h-screen relative my-8 border"
       ref={ref}
       id='skills'
     >
@@ -52,10 +52,10 @@ function Skills() {
         </h3>
       </motion.div>
 
-      <div className="container mx-auto  flex justify-center items-center flex-col  ">
+      <div className="container flex justify-center items-center flex-col  ">
 
         <motion.div
-          className="grid md:grid-cols-4 grid-cols-3 gap-8 md:gap-x-20 gap-x-12"
+          className="grid md:grid-cols-4 grid-cols-3 gap-8 md:gap-x-20 gap-x-10"
           variants={containerVariants}
           initial="hidden"
           animate={controls}
