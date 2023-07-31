@@ -77,7 +77,7 @@ const ProjectsPage = () => {
             />
             </motion.button>
             {projectsData.projects.map((project, index) => (
-              <button key={project.id} className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${index === currentSlide ? "bg-violet-600" : "bg-gray-300"}`} onClick={() => setCurrentSlide(index)} />
+              <button key={project.id} className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${index === currentSlide ? "bg-violet-600" : "bg-gray-300"}`} />
             ))}
                 <motion.button type="button" className="md:hidden inline" data-carousel-next onClick={handleCarouselNext}>
               <span className="sr-only">next</span>
