@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=" flex gap-x-2 my-4 relative bottom-3">
+      <div className=" flex gap-x-6 my-4 relative bottom-3">
         <Image
           src="/githubwhite.svg"
           alt="Telegram logo"
