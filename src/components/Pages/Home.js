@@ -31,6 +31,8 @@ const Home = () => {
               alt="LinkedIn logo"
               width={24}
               height={24}
+              loading="eager"
+              priority={true}
             />
           </Link>
           <Link

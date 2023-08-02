@@ -254,6 +254,53 @@ const Navbar = () => {
                   Portfolio
                 </motion.a>
               </li>
+              <li>
+                <motion.a
+                  href="/#contact"
+                  className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
+                    activeLink === "/#contact" ? "text-violet-600" : "text-white"
+                  }`}
+                  onClick={() => handleMenuItemClick("/#contact")}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <motion.div
+                    className={`${activeLink === "/#contact" ? "block" : "hidden"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/directViolet.svg"
+                      alt="direct logo"
+                      width={18}
+                      height={18}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  <motion.div
+                    className={`${activeLink === "/#contact" ? "hidden" : "block"}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Image
+                      src="/direct.svg"
+                      alt="direct logo"
+                      width={18}
+                      height={18}
+                      loading="eager"
+                      priority={true}
+                    />
+                  </motion.div>
+                  Contact Me
+                </motion.a>
+              </li>
+
+
               <button onClick={toggleMenu}>
                 <Image
                   className="absolute right-8 bottom-6"
@@ -347,6 +394,18 @@ const Navbar = () => {
               href="/#portfolio"
             >
               Portfolio
+            </a>
+          </li>
+          <li>
+            <a
+              className={`${
+                activeLink === '/#contact'
+                  ? 'text-violet-600'
+                  : 'text-white'
+              }`}
+              href="/#contact"
+            >
+              Contact Me
             </a>
           </li>
         </ul>
