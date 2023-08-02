@@ -426,7 +426,7 @@ const Navbar = () => {
         transition={{ duration: 0.3 }}
       >
         <span className="sr-only">Open main menu</span>
-        <div className="absolute right-8 top-4 bg-violet-600 rounded-full p-2">
+        <div className="absolute right-8 top-2 bg-violet-600 rounded-full p-2">
           <Image
             src="/menu.svg"
             alt="menu logo"
