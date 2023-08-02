@@ -2,14 +2,16 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="bg-footerBack h-40 flex flex-col justify-center items-center ">
+    <div className="bg-footerBack h-40  w-screen ">
+    <div className="bg-footerBack h-40 flex flex-col justify-center items-center  ">
+
       <div>
         <div
-          className={`items-center justify-between md:flex md:space-x-8 mx-auto max-w-screen-xl hidden p-4`}
+          className={`items-center justify-between flex md:space-x-8 mx-auto max-w-screen-xl  p-4`}
           id="navbar-default"
         >
           <div
-            className={`items-center justify-center w-full md:flex md:space-x-8 mx-auto max-w-screen-xl hidden  p-4`}
+            className={`items-center justify-center w-full flex md:space-x-8 mx-auto max-w-screen-xl   p-4`}
             id="navbar-default"
           >
             <ul className="font-medium text-sm flex space-x-8 ">
@@ -24,13 +26,13 @@ const Footer = () => {
               <li>
                 <a href="/#skills">Skills</a>
               </li>
-              <li>
+              <li className="hidden md:inline">
                 <a href="/#Qualification">Qualification</a>
               </li>
-              <li>
+              <li className="hidden md:inline">
                 <a href="/#portfolio">Portfolio</a>
               </li>
-              <li>
+              <li className="hidden md:inline">
                 <a href="/#contact">Contact Me</a>
               </li>
             </ul>
@@ -83,6 +85,8 @@ const Footer = () => {
         © Yusif Qasim. All rights reserved.
       </div>
     </div>
+    </div>
+
   );
 };
 

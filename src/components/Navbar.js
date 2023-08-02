@@ -415,7 +415,7 @@ const Navbar = () => {
       {/* Mobile menu button */}
       <motion.button
         type="button"
-        className={`md:hidden w-full p-4 text-center h-16 bg-ProjectBackground shadow-lg shadow-violet-600 text-white fixed bottom-0 right-0 ${
+        className={`md:hidden w-full p-4 text-center h-16 bg-transparent  text-white fixed bottom-0 right-0 ${
           isMenuOpen ? "hidden rotate-90" : "flex flex-col"
         }`}
         aria-controls="navbar-default"
@@ -426,7 +426,7 @@ const Navbar = () => {
         transition={{ duration: 0.3 }}
       >
         <span className="sr-only">Open main menu</span>
-        <div className="absolute right-8 top-4">
+        <div className="absolute right-8 top-4 bg-violet-600 rounded-full p-2">
           <Image
             src="/menu.svg"
             alt="menu logo"

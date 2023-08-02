@@ -53,7 +53,7 @@ const App = () => {
     <div className=" flex flex-col md:flex-row gap-x-4 gap-y-4 justify-center items-center  w-full ">
     
 
-      <div className="flex md:flex-col flex-row gap-x-2 my-2 md:my-0 gap-6  justify-start h-3/4">
+      <div className="flex md:flex-col flex-row gap-x-2 my-2 md:my-0 gap-6  justify-start flex-wrap">
         <div className="flex gap-x-2 items-center  ">
           <Image
             src="/phone.svg"
