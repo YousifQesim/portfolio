@@ -18,7 +18,8 @@ module.exports = {
         grayColor:'#bcbac4',
         timeColor:"#a19fad",
         ProjectBackground:"hsl(250, 28%, 12%)",
-        inputBackground:"hsl(250, 29%, 16%)"
+        inputBackground:"hsl(250, 29%, 16%)",
+        footerBack:"hsl(250, 30%, 8%);"
         
       },
       screens: {
