@@ -415,7 +415,7 @@ const Navbar = () => {
       {/* Mobile menu button */}
       <motion.button
         type="button"
-        className={`md:hidden w-full p-4 text-center h-16 bg-transparent  text-white fixed bottom-0 right-0 ${
+        className={`md:hidden w-1/4 p-4 text-center h-16 bg-transparent  text-white fixed bottom-0 right-0 ${
           isMenuOpen ? "hidden rotate-90" : "flex flex-col"
         }`}
         aria-controls="navbar-default"

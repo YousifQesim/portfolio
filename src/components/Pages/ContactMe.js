@@ -34,7 +34,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen mt-32 relative" id="contact">
+    <div className="min-h-screen mt-40 relative" id="contact">
 
       
 <motion.div

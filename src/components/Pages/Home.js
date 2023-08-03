@@ -93,12 +93,13 @@ const Home = () => {
                 interfaces that provide an enjoyable and seamless user
                 experience.
               </motion.p>
+              <a href="/#contact">
               <motion.button
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 0.8    }}
                 className="text-white bg-violet-600 hover:bg-violet-800 transition ease-in-out delay-10 duration-200 gap-2  focus:outline-none font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center"
-              >
+                >
                 Contact me
                 <AnimatedImage
                   src="/direct.svg"
@@ -107,8 +108,10 @@ const Home = () => {
                   height={20}
                   loading="eager"
                   priority={true}
-                />
+                  />
               </motion.button>
+                  </a>
+              
             </div>
 
             <Link href="#about">

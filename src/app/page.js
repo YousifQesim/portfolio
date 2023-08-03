@@ -1,4 +1,3 @@
-
 import Home from "@/components/Pages/Home";
 import About from "@/components/Pages/About";
 import Skills from "@/components/Pages/skills";
@@ -7,21 +6,15 @@ import Projects from "@/components/Pages/Projects";
 import ContactMe from "@/components/Pages/ContactMe";
 import Footer from "@/components/Pages/Footer";
 const HomePage = () => {
-
   return (
-    <div >
-      
-      <div>
-        
-      <Home/>
-      <About/>
-      <Skills/>
-      <Qualification/>
-<Projects/>
-  <ContactMe/>
-  <Footer />
-      </div>
-      
+    <div className="dark:bg-ProjectBackground">
+      <Home />
+      <About />
+      <Skills />
+      <Qualification />
+      <Projects />
+      <ContactMe />
+      <Footer />
     </div>
   );
 };
