@@ -5,7 +5,7 @@ import skillsData from "/skills.json";
 import { useEffect } from 'react';
 
 function Skills() {
-  const { ref, inView } = useInView({ threshold: 0.7 });
+  const { ref, inView } = useInView({ threshold: 0.2 });
   const controls = useAnimation();
 
   const containerVariants = {

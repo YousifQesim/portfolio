@@ -14,7 +14,7 @@ const DownloadButton = dynamic(() => import("../DownloadButton"), {
 const About = () => {
   const [pdfUrl, setPdfUrl] = useState("");
   const controls = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { ref, inView } = useInView({ threshold: 0.2 });
 
   useEffect(() => {
     if (inView) {

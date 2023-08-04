@@ -8,6 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 body {
   font-family: "Poppins", Arial, sans-serif;
@@ -181,3 +182,4 @@ select:-webkit-autofill:focus {
 p{
   font-family: 'Roboto', sans-serif;
 }
+

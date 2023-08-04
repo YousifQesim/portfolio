@@ -32,9 +32,10 @@ const App = () => {
         toast.error("Failed to send email. Please try again later.");
       });
   };
+  
 
   return (
-    <div className="min-h-screen mt-40 relative" id="contact">
+    <div className="h-screen mt-40 sm:mt-52 relative" id="contact">
 
       
 <motion.div
@@ -43,10 +44,10 @@ const App = () => {
         transition={{ delay: 0.2, duration: 0.5 }}
         className='my-8'
       >
-        <h1 className="lg:text-7xl text-4xl font-extrabold text-white text-center opacity-5 uppercase">
-        Contact Me
+        <h1 className="lg:text-7xl text-6xl font-extrabold text-white text-center opacity-5 uppercase">
+        Contact
         </h1>
-        <h3 className="text-xl font-extrabold text-white text-center absolute top-1 lg:top-6 left-[27%] vsm:left-[30%] m:left-[34%] md:left-[40%] lg:left-[43%] xl:left-[45%] ">
+        <h3 className="text-xl font-extrabold text-white text-center absolute top-4 lg:top-6 left-[29%] vsm:left-[32%] m:left-[35%] md:left-[40%] lg:left-[43%] xl:left-[45%] ">
          Get In Touch
         </h3>
       </motion.div>

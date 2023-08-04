@@ -1,13 +1,21 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Timeline({ data }) {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    rootMargin: "-100px 0px", // adjust this value to change when the animation is triggered
-  });
+
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ threshold: 0.2 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
 
   return (
     <div className="timeline" ref={ref}>
