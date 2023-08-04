@@ -63,7 +63,7 @@ export default function Qualification() {
           <h1 className="lg:text-7xl text-5xl font-extrabold text-white text-center opacity-5 uppercase">
             Achievement
           </h1>
-          <h3 className="text-xl font-extrabold text-white text-center absolute top-2 lg:top-6 left-[31%] vsm:left-[30%] m:left-[34%] md:left-[40%] lg:left-[43%] xl:left-[45%] ">
+          <h3 className="text-xl font-extrabold text-white text-center absolute top-2 lg:top-6 left-[30%] vsm:left-[28%] m:left-[32%] md:left-[40%] lg:left-[41%] xl:left-[45%] ">
             personal journey
           </h3>
         </motion.div>
