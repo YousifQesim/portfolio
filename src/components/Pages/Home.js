@@ -166,7 +166,7 @@ const Home = () => {
               alt="Personal Image - Yusif Qasim"
               width={270}
               height={270}
-              loading="eager"
+          priority={true}
           
             />
           </motion.div>
