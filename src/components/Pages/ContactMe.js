@@ -54,7 +54,7 @@ const App = () => {
         <h1 className="lg:text-7xl text-6xl font-extrabold text-white text-center opacity-5 uppercase">
           Contact
         </h1>
-        <h3 className="text-xl font-extrabold text-white text-center absolute top-4 lg:top-6 left-[29%] vsm:left-[32%] m:left-[35%] md:left-[40%] lg:left-[43%] xl:left-[45%] ">
+        <h3 className="text-xl font-extrabold text-white text-center absolute top-4 lg:top-6 left-[29%] vsm:left-[32%] m:left-[35%] md:left-[40%] lg:left-[43%] xl:left-[46%] ">
           Get In Touch
         </h3>
       </motion.div>
