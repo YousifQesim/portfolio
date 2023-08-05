@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Head from "next/head";
 
 import Link from "next/link";
 
@@ -19,6 +20,11 @@ const AnimatedImage = ({ src, alt, width, height }) => {
 const Home = () => {
   return (
     <div className="h-screen flex justify-center items-center relative">
+         <Head>
+        <title>Yusif Qasim - Portfolio</title>
+        <meta name="description" content="Yusif Qasim - Portfolio" />
+        <meta name="keywords" content="Yusif , qasim, Portfolio, Yusif Qasim Portfolio, next js portfolio" />
+      </Head>
       <div className="flex xl:justify-center justify-start md:ml-12 ml-4 xl:ml-0 items-center gap-8 mb-24 flex-wrap">
         <div className="flex vsm:flex-col flex-row order-last vsm:order-first    gap-6">
           <Link
@@ -28,7 +34,7 @@ const Home = () => {
           >
             <AnimatedImage
               src="/linked.svg"
-              alt="LinkedIn logo"
+              alt="LinkedIn logo - Yusif Qasim"
               width={24}
               height={24}
               loading="eager"
@@ -42,7 +48,7 @@ const Home = () => {
           >
             <AnimatedImage
               src="/github.svg"
-              alt="GitHub logo"
+              alt="GitHub logo - Yusif Qasim"
               width={24}
               height={24}
               loading="eager"
@@ -56,7 +62,7 @@ const Home = () => {
           >
             <AnimatedImage
               src="/telegram.svg"
-              alt="Telegram logo"
+              alt="Telegram logo - Yusif Qasim"
               width={24}
               height={24}
               loading="eager"
@@ -103,7 +109,7 @@ const Home = () => {
                 Contact me
                 <AnimatedImage
                   src="/direct.svg"
-                  alt="Telegram logo"
+                  alt="Telegram logo - Yusif Qasim"
                   width={20}
                   height={20}
                   loading="eager"
@@ -123,7 +129,7 @@ const Home = () => {
               >
                 <AnimatedImage
                   src="/mouse.svg"
-                  alt="Mouse logo"
+                  alt="Mouse logo - Yusif Qasim"
                   width={24}
                   height={24}
                   loading="eager"
@@ -138,7 +144,7 @@ const Home = () => {
                 <AnimatedImage
               
               src="/down.svg"
-              alt="Mouse logo"
+              alt="Mouse logo - Yusif Qasim"
               width={24}
               height={24}
               loading="eager"
@@ -159,7 +165,7 @@ const Home = () => {
           >
             <AnimatedImage
               src="/my.png"
-              alt="Personal Image"
+              alt="Personal Image - Yusif Qasim"
               width={270}
               height={270}
               loading="eager"

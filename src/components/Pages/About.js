@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import NumberCounters from "../NumberCounters";
 import { useInView } from "react-intersection-observer";
 import VideoPopup from "../VideoPopUp";
+import Head from "next/head";
 
 const DownloadButton = dynamic(() => import("../DownloadButton"), {
   ssr: false,
@@ -45,6 +46,11 @@ const About = () => {
       ref={ref}
       style={{ overflow: "hidden" }}
     >
+         <Head>
+        <title>Yusif Qasim - Portfolio</title>
+        <meta name="description" content="Yusif Qasim - Portfolio" />
+        <meta name="keywords" content="Yusif , qasim, Portfolio, Yusif Qasim Portfolio, next js portfolio" />
+      </Head>
       <div className="flex flex-col md:my-0 md:w-3/4 lg:w-5/6 mx-auto ">
         <motion.div
         className="lg:hidden"
@@ -70,7 +76,7 @@ const About = () => {
             <Image
               className="mx-auto my-0 rounded-2xl"
               src="/my.jpg"
-              alt="Next.js Logo"
+              alt="Next.js Logo - Yusif Qasim"
               width={400}
               height={400}
               loading="eager"
@@ -137,7 +143,7 @@ const About = () => {
                   Download Resume
                   <Image
                     src="/download.svg"
-                    alt="telegram logo"
+                    alt="telegram logo - Yusif Qasim"
                     width={20}
                     height={20}
                     loading="eager"

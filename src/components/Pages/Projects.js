@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ProjectCard from "../ProjectCard";
 import projectsData from "/projects.json";
 import Image from "next/image";
+import Head from "next/head";
 
 const ProjectsPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -35,6 +36,15 @@ const ProjectsPage = () => {
   }, []);
   return (
     <div className="min-h-screen container mx-auto my-8 relative px-4 flex flex-col" id="portfolio">
+         <Head>
+        <title>Yusif Qasim - Portfolio</title>
+        <meta name="description" content="Yusif Qasim - Portfolio" />
+        <meta name="keywords" content="Yusif , qasim, Portfolio, Yusif Qasim Portfolio, next js portfolio" />
+      </Head>   <Head>
+        <title>Yusif Qasim - Portfolio</title>
+        <meta name="description" content="Yusif Qasim - Portfolio" />
+        <meta name="keywords" content="Yusif , qasim, Portfolio, Yusif Qasim Portfolio, next js portfolio" />
+      </Head>
       <div className="absolute top-16 w-full left-0">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2, duration: 0.5 }} className="relative bottom-28 my-16">
           <h1 className="md:text-7xl text-6xl font-extrabold text-white text-center opacity-5 uppercase">Portfolio</h1>
@@ -69,7 +79,7 @@ const ProjectsPage = () => {
               <span className="sr-only">prev</span>
               <Image
               src="/prev.svg"
-              alt="prev logo"
+              alt="prev logo - Yusif Qasim"
               width={30}
               height={30}
               loading="eager"
@@ -83,7 +93,7 @@ const ProjectsPage = () => {
               <span className="sr-only">next</span>
               <Image
               src="/next.svg"
-              alt="next logo"
+              alt="next logo - Yusif Qasim"
               width={30}
               height={30}
               loading="eager"

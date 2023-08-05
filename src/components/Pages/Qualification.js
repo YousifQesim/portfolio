@@ -49,6 +49,11 @@ export default function Qualification() {
 
   return (
     <motion.div id="Qualification" className="h-screen relative w-full">
+         <Head>
+        <title>Yusif Qasim - Portfolio</title>
+        <meta name="description" content="Yusif Qasim - Portfolio" />
+        <meta name="keywords" content="Yusif , qasim, Portfolio, Yusif Qasim Portfolio, next js portfolio" />
+      </Head>
       <main className="relative top-10 w-full">
         <motion.div
           animate={controls}
@@ -79,7 +84,7 @@ export default function Qualification() {
                 <Image
                   className={`${activeButton === 'education' ? 'inline' : 'hidden'}`}
                   src="/educationViolet.svg"
-                  alt="education logo"
+                  alt="education logo - Yusif Qasim"
                   width={20}
                   height={20}
                   loading="eager"
@@ -88,7 +93,7 @@ export default function Qualification() {
                 <Image
                   className={`${activeButton === 'education' ? 'hidden' : 'inline'}`}
                   src="/education.svg"
-                  alt="education logo"
+                  alt="education logo - Yusif Qasim"
                   width={20}
                   height={20}
                   loading="eager"
@@ -105,7 +110,7 @@ export default function Qualification() {
                 <Image
                   className={`${activeButton === 'certification' ? 'inline' : 'hidden'}`}
                   src="/certificationViolet.svg"
-                  alt="certification logo"
+                  alt="certification logo - Yusif Qasim"
                   width={20}
                   height={20}
                   loading="eager"
@@ -114,7 +119,7 @@ export default function Qualification() {
                 <Image
                   className={`${activeButton === 'certification' ? 'hidden' : 'inline'}`}
                   src="/certification.svg"
-                  alt="certification logo"
+                  alt="certification logo - Yusif Qasim"
                   width={20}
                   height={20}
                   loading="eager"
@@ -131,7 +136,7 @@ export default function Qualification() {
                 <Image
                   className={`${activeButton === 'work' ? 'inline' : 'hidden'}`}
                   src="/workViolet.svg"
-                  alt="work logo"
+                  alt="work logo - Yusif Qasim"
                   width={20}
                   height={20}
                   loading="eager"
@@ -140,7 +145,7 @@ export default function Qualification() {
                 <Image
                   className={`${activeButton === 'work' ? 'hidden' : 'inline'}`}
                   src="/work.svg"
-                  alt="work logo"
+                  alt="work logo - Yusif Qasim"
                   width={20}
                   height={20}
                   loading="eager"

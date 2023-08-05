@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
+import Head from "next/head";
 
 const App = () => {
   const form = useRef();
@@ -36,7 +37,11 @@ const App = () => {
 
   return (
     <div className="h-screen mt-40 sm:mt-52 relative" id="contact">
-
+   <Head>
+        <title>Yusif Qasim - Portfolio</title>
+        <meta name="description" content="Yusif Qasim - Portfolio" />
+        <meta name="keywords" content="Yusif , qasim, Portfolio, Yusif Qasim Portfolio, next js portfolio" />
+      </Head>
       
 <motion.div
         initial={{ opacity: 0 }}
@@ -58,7 +63,7 @@ const App = () => {
         <div className="flex gap-x-2 items-center  ">
           <Image
             src="/phone.svg"
-            alt="phone logo"
+            alt="phone logo - Yusif Qasim"
             width={24}
             height={24}
             loading="eager"
@@ -73,7 +78,7 @@ const App = () => {
 
           <Image
             src="/email.svg"
-            alt="email logo"
+            alt="email logo - Yusif Qasim"
             width={24}
             height={24}
             loading="eager"
@@ -88,7 +93,7 @@ const App = () => {
 
           <Image
             src="/location.svg"
-            alt="location logo"
+            alt="location logo - Yusif Qasim"
             width={24}
             height={24}
             loading="eager"

@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import skillsData from "/skills.json";
 import { useEffect } from 'react';
+import Head from 'next/head';
 
 function Skills() {
   const { ref, inView } = useInView({ threshold: 0.2 });
@@ -38,6 +39,11 @@ function Skills() {
       ref={ref}
       id='skills'
     >
+         <Head>
+        <title>Yusif Qasim - Portfolio</title>
+        <meta name="description" content="Yusif Qasim - Portfolio" />
+        <meta name="keywords" content="Yusif , qasim, Portfolio, Yusif Qasim Portfolio, next js portfolio" />
+      </Head>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -70,7 +76,7 @@ function Skills() {
                 <div className="h-12 w-12 flex items-center">
                   <motion.img
                     src={skill.logo}
-                    alt={`${skill.name} logo`}
+                    alt={`${skill.name} logo - Yusif Qasim`}
                     width={35}
                     height={35}
                     className="mx-auto my-0"
