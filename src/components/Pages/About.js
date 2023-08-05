@@ -7,6 +7,7 @@ import NumberCounters from "../NumberCounters";
 import { useInView } from "react-intersection-observer";
 import VideoPopup from "../VideoPopUp";
 import Head from "next/head";
+import Myimg from "/public/mysuite.webp"
 
 const DownloadButton = dynamic(() => import("../DownloadButton"), {
   ssr: false,
@@ -78,7 +79,7 @@ const About = () => {
           >
             <Image
               className="mx-auto my-0 rounded-2xl"
-              src="/mysuite.webp"
+              src={Myimg}
               alt="Next.js Logo - Yusif Qasim"
               width={400}
               height={400}
