@@ -114,7 +114,7 @@ const Home = () => {
               
             </div>
 
-            <Link href="#about">
+            <a href="#about">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -146,7 +146,7 @@ const Home = () => {
               />
               </span>
               </motion.div>
-            </Link>
+            </a>
           </div>
         </div>
 

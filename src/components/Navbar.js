@@ -330,19 +330,23 @@ const Navbar = () => {
         } items-center justify-between w-full md:flex md:space-x-8 mx-auto max-w-screen-xl hidden  p-4`}
         id="navbar-default"
       >
+        <a href="/#">
+
         <div className="flex items-center">
           <span className="text-2xl font-semibold text-white hover:text-violet-600 cursor-pointer">
             Yusif Qasim
           </span>
         </div>
+        </a>
         <ul className="font-medium text-sm flex space-x-8 ">
           <li>
             <a
               className={`${
-                activeLink === '/#'? 'text-violet-600'
-                : 'text-white'
+            activeLink === "/#" ? "text-violet-600" : "text-white"
               
               }`}
+              onClick={() => handleMenuItemClick("/#")}
+
               aria-current="page"
               href="/#"
             >
@@ -356,6 +360,8 @@ const Navbar = () => {
                 activeLink === '/#about'    ? 'text-violet-600'
                 : 'text-white'
               }`}
+              onClick={() => handleMenuItemClick("/#about")}
+
               href="/#about"
             >
               About
@@ -368,6 +374,8 @@ const Navbar = () => {
                 : 'text-white'
               }`}
               href="/#skills"
+              onClick={() => handleMenuItemClick("/#skills")}
+
             >
               Skills
             </a>
@@ -375,11 +383,11 @@ const Navbar = () => {
           <li>
             <a
               className={`${
-                activeLink === '/#Qualification'
-                ? 'text-violet-600'
-                : 'text-white'
+                activeLink === "/#Qualification" ? "text-violet-600" : "text-white"
               }`}
               href="/#Qualification"
+              onClick={() => handleMenuItemClick("/#Qualification")}
+
             >
               Qualification
             </a>
@@ -391,6 +399,8 @@ const Navbar = () => {
                   ? 'text-violet-600'
                   : 'text-white'
               }`}
+              onClick={() => handleMenuItemClick("/#portfolio")}
+
               href="/#portfolio"
             >
               Portfolio
@@ -403,6 +413,8 @@ const Navbar = () => {
                   ? 'text-violet-600'
                   : 'text-white'
               }`}
+              onClick={() => handleMenuItemClick("/#contact")}
+
               href="/#contact"
             >
               Contact Me
@@ -442,4 +454,8 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
 
