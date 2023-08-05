@@ -78,7 +78,7 @@ const About = () => {
           >
             <Image
               className="mx-auto my-0 rounded-2xl"
-              src="/my.jpg"
+              src="/mysuite.webp"
               alt="Next.js Logo - Yusif Qasim"
               width={400}
               height={400}
