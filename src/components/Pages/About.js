@@ -7,7 +7,7 @@ import NumberCounters from "../NumberCounters";
 import { useInView } from "react-intersection-observer";
 import VideoPopup from "../VideoPopUp";
 import Head from "next/head";
-import Myimg from "/public/mysuite.webp"
+import Myimg from "../../../public/mysuite.webp"
 
 const DownloadButton = dynamic(() => import("../DownloadButton"), {
   ssr: false,
