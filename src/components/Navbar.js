@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,8 +30,8 @@ const Navbar = () => {
             className="md:hidden fixed bottom-0 left-0 right-0"
           >
             <ul className="font-medium text-xs flex justify-center items-center gap-8 min-h-48 flex-wrap w-full p-4 md:p-0 bg-ProjectBackground shadow-lg shadow-indigo-600">
-            <li>
-                <motion.a
+              <li>
+                <motion.link
                   href="/#"
                   className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
                     activeLink === "/#" ? "text-violet-600" : "text-white"
@@ -71,11 +72,11 @@ const Navbar = () => {
                       priority={true}
                     />
                   </motion.div>
-                  Home 
-                </motion.a>
+                  Home
+                </motion.link>
               </li>
               <li>
-                <motion.a
+                <motion.link
                   href="/#about"
                   className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
                     activeLink === "/#about" ? "text-violet-600" : "text-white"
@@ -87,7 +88,9 @@ const Navbar = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <motion.div
-                    className={`${activeLink === "/#about" ? "block" : "hidden"}`}
+                    className={`${
+                      activeLink === "/#about" ? "block" : "hidden"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -102,7 +105,9 @@ const Navbar = () => {
                     />
                   </motion.div>
                   <motion.div
-                    className={`${activeLink === "/#about" ? "hidden" : "block"}`}
+                    className={`${
+                      activeLink === "/#about" ? "hidden" : "block"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -117,10 +122,10 @@ const Navbar = () => {
                     />
                   </motion.div>
                   About
-                </motion.a>
+                </motion.link>
               </li>
               <li>
-                <motion.a
+                <motion.link
                   href="/#skills"
                   className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
                     activeLink === "/#skills" ? "text-violet-600" : "text-white"
@@ -132,7 +137,9 @@ const Navbar = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <motion.div
-                    className={`${activeLink === "/#skills" ? "block" : "hidden"}`}
+                    className={`${
+                      activeLink === "/#skills" ? "block" : "hidden"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -147,7 +154,9 @@ const Navbar = () => {
                     />
                   </motion.div>
                   <motion.div
-                    className={`${activeLink === "/#skills" ? "hidden" : "block"}`}
+                    className={`${
+                      activeLink === "/#skills" ? "hidden" : "block"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -162,13 +171,15 @@ const Navbar = () => {
                     />
                   </motion.div>
                   Skills
-                </motion.a>
+                </motion.link>
               </li>
               <li>
-                <motion.a
+                <motion.link
                   href="/#Qualification"
                   className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
-                    activeLink === "/#Qualification" ? "text-violet-600" : "text-white"
+                    activeLink === "/#Qualification"
+                      ? "text-violet-600"
+                      : "text-white"
                   }`}
                   onClick={() => handleMenuItemClick("/#Qualification")}
                   initial={{ opacity: 0, x: -20 }}
@@ -177,7 +188,9 @@ const Navbar = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <motion.div
-                    className={`${activeLink === "/#Qualification" ? "block" : "hidden"}`}
+                    className={`${
+                      activeLink === "/#Qualification" ? "block" : "hidden"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -192,7 +205,9 @@ const Navbar = () => {
                     />
                   </motion.div>
                   <motion.div
-                    className={`${activeLink === "/#Qualification" ? "hidden" : "block"}`}
+                    className={`${
+                      activeLink === "/#Qualification" ? "hidden" : "block"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -201,19 +216,21 @@ const Navbar = () => {
                       src="/education.svg"
                       alt="education logo"
                       width={18}
-                  height={18}
+                      height={18}
                       loading="eager"
                       priority={true}
                     />
                   </motion.div>
                   Qualification
-                </motion.a>
+                </motion.link>
               </li>
               <li>
-                <motion.a
+                <motion.link
                   href="/#portfolio"
                   className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
-                    activeLink === "/#portfolio" ? "text-violet-600" : "text-white"
+                    activeLink === "/#portfolio"
+                      ? "text-violet-600"
+                      : "text-white"
                   }`}
                   onClick={() => handleMenuItemClick("/#portfolio")}
                   initial={{ opacity: 0, x: -20 }}
@@ -222,7 +239,9 @@ const Navbar = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <motion.div
-                    className={`${activeLink === "/#portfolio" ? "block" : "hidden"}`}
+                    className={`${
+                      activeLink === "/#portfolio" ? "block" : "hidden"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -237,7 +256,9 @@ const Navbar = () => {
                     />
                   </motion.div>
                   <motion.div
-                    className={`${activeLink === "/#portfolio" ? "hidden" : "block"}`}
+                    className={`${
+                      activeLink === "/#portfolio" ? "hidden" : "block"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -252,13 +273,15 @@ const Navbar = () => {
                     />
                   </motion.div>
                   Portfolio
-                </motion.a>
+                </motion.link>
               </li>
               <li>
-                <motion.a
+                <motion.link
                   href="/#contact"
                   className={`flex flex-col justify-center items-center py-2 pl-3 pr-4 ${
-                    activeLink === "/#contact" ? "text-violet-600" : "text-white"
+                    activeLink === "/#contact"
+                      ? "text-violet-600"
+                      : "text-white"
                   }`}
                   onClick={() => handleMenuItemClick("/#contact")}
                   initial={{ opacity: 0, x: -20 }}
@@ -267,7 +290,9 @@ const Navbar = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <motion.div
-                    className={`${activeLink === "/#contact" ? "block" : "hidden"}`}
+                    className={`${
+                      activeLink === "/#contact" ? "block" : "hidden"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -282,7 +307,9 @@ const Navbar = () => {
                     />
                   </motion.div>
                   <motion.div
-                    className={`${activeLink === "/#contact" ? "hidden" : "block"}`}
+                    className={`${
+                      activeLink === "/#contact" ? "hidden" : "block"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -297,9 +324,8 @@ const Navbar = () => {
                     />
                   </motion.div>
                   Contact Me
-                </motion.a>
+                </motion.link>
               </li>
-
 
               <button onClick={toggleMenu}>
                 <Image
@@ -324,104 +350,93 @@ const Navbar = () => {
         } items-center justify-between md:flex md:space-x-8 mx-auto max-w-screen-xl hidden p-4`}
         id="navbar-default"
       >
-           <div
-        className={`${
-          isMenuOpen ? 'hidden' : 'flex'
-        } items-center justify-between w-full md:flex md:space-x-8 mx-auto max-w-screen-xl hidden  p-4`}
-        id="navbar-default"
-      >
-        <a href="/#">
-
-        <div className="flex items-center">
-          <span className="text-2xl font-semibold text-white hover:text-violet-600 cursor-pointer">
-            Yusif Qasim
-          </span>
+        <div
+          className={`${
+            isMenuOpen ? "hidden" : "flex"
+          } items-center justify-between w-full md:flex md:space-x-8 mx-auto max-w-screen-xl hidden  p-4`}
+          id="navbar-default"
+        >
+          <a href="/#">
+            <div className="flex items-center">
+              <span className="text-2xl font-semibold text-white hover:text-violet-600 cursor-pointer">
+                Yusif Qasim
+              </span>
+            </div>
+          </a>
+          <ul className="font-medium text-sm flex space-x-8 ">
+            <li>
+              <a
+                className={`${
+                  activeLink === "/#" ? "text-violet-600" : "text-white"
+                }`}
+                onClick={() => handleMenuItemClick("/#")}
+                aria-current="page"
+                href="/#"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <Link
+                className={`${
+                  activeLink === "/#about" ? "text-violet-600" : "text-white"
+                }`}
+                onClick={() => handleMenuItemClick("/#about")}
+                href="/#about"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`${
+                  activeLink === "/#skills" ? "text-violet-600" : "text-white"
+                }`}
+                href="/#skills"
+                onClick={() => handleMenuItemClick("/#skills")}
+              >
+                Skills
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`${
+                  activeLink === "/#Qualification"
+                    ? "text-violet-600"
+                    : "text-white"
+                }`}
+                href="/#Qualification"
+                onClick={() => handleMenuItemClick("/#Qualification")}
+              >
+                Qualification
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`${
+                  activeLink === "/#portfolio"
+                    ? "text-violet-600"
+                    : "text-white"
+                }`}
+                onClick={() => handleMenuItemClick("/#portfolio")}
+                href="/#portfolio"
+              >
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`${
+                  activeLink === "/#contact" ? "text-violet-600" : "text-white"
+                }`}
+                onClick={() => handleMenuItemClick("/#contact")}
+                href="/#contact"
+              >
+                Contact Me
+              </Link>
+            </li>
+          </ul>
         </div>
-        </a>
-        <ul className="font-medium text-sm flex space-x-8 ">
-          <li>
-            <a
-              className={`${
-            activeLink === "/#" ? "text-violet-600" : "text-white"
-              
-              }`}
-              onClick={() => handleMenuItemClick("/#")}
-
-              aria-current="page"
-              href="/#"
-            >
-            
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              className={`${
-                activeLink === '/#about'    ? 'text-violet-600'
-                : 'text-white'
-              }`}
-              onClick={() => handleMenuItemClick("/#about")}
-
-              href="/#about"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              className={`${
-                activeLink === '/#skills'    ? 'text-violet-600'
-                : 'text-white'
-              }`}
-              href="/#skills"
-              onClick={() => handleMenuItemClick("/#skills")}
-
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              className={`${
-                activeLink === "/#Qualification" ? "text-violet-600" : "text-white"
-              }`}
-              href="/#Qualification"
-              onClick={() => handleMenuItemClick("/#Qualification")}
-
-            >
-              Qualification
-            </a>
-          </li>
-          <li>
-            <a
-              className={`${
-                activeLink === '/#portfolio'
-                  ? 'text-violet-600'
-                  : 'text-white'
-              }`}
-              onClick={() => handleMenuItemClick("/#portfolio")}
-
-              href="/#portfolio"
-            >
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a
-              className={`${
-                activeLink === '/#contact'
-                  ? 'text-violet-600'
-                  : 'text-white'
-              }`}
-              onClick={() => handleMenuItemClick("/#contact")}
-
-              href="/#contact"
-            >
-              Contact Me
-            </a>
-          </li>
-        </ul>
-      </div>
       </div>
 
       {/* Mobile menu button */}
@@ -454,8 +469,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-

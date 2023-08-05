@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -46,14 +46,17 @@ const About = () => {
       ref={ref}
       style={{ overflow: "hidden" }}
     >
-         <Head>
+      <Head>
         <title>Yusif Qasim - Portfolio</title>
         <meta name="description" content="Yusif Qasim - Portfolio" />
-        <meta name="keywords" content="Yusif , qasim, Portfolio, Yusif Qasim Portfolio, next js portfolio" />
+        <meta
+          name="keywords"
+          content="Yusif , qasim, Portfolio, Yusif Qasim Portfolio, next js portfolio"
+        />
       </Head>
       <div className="flex flex-col md:my-0 md:w-3/4 lg:w-5/6 mx-auto ">
         <motion.div
-        className="lg:hidden"
+          className="lg:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
@@ -79,8 +82,8 @@ const About = () => {
               alt="Next.js Logo - Yusif Qasim"
               width={400}
               height={400}
-              loading="eager"
-              priority={true}
+              loading="lazy"
+          
             />
           </motion.div>
 
@@ -90,34 +93,31 @@ const About = () => {
             transition={{ delay: 1.5, duration: 0.5 }}
             className="flex flex-col lg:w-2/4"
           >
-                <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-            className="lg:flex lg:flex-col lg:relative md:my-0  h-auto hidden "
-          >
-            
-
-            <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
-              About me
-            </h1>
-            <h3 className="text-xl font-extrabold text-white text-center absolute top-6 lg:right-[30%] xl:right-[42%] ">
-               Introduction
-            </h3>
-        
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 0.5 }}
+              className="lg:flex lg:flex-col lg:relative md:my-0  h-auto hidden "
+            >
+              <h1 className="text-7xl font-extrabold text-white text-center opacity-5 uppercase">
+                About me
+              </h1>
+              <h3 className="text-xl font-extrabold text-white text-center absolute top-6 lg:right-[30%] xl:right-[42%] ">
+                Introduction
+              </h3>
+            </motion.div>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2.5, duration: 0.5 }}
               className="white text-justify mt-12 mx-auto my-0 w-3/4 md:w-full"
             >
-              I am an individual with broad skills, also energetic and eager to
-              learn new ones. I am always highly enthused about my work and tasks
-              ahead, extremely driven, with a clear goal to succeed, and committed
-              to learning and self-development. Furthermore, I am adept at
-              handling multiple tasks on a daily basis competently and at working
-              well under pressure.
+              I am an individual with broad skills, also energetic and lazy to
+              learn new ones. I am always highly enthused about my work and
+              tasks ahead, extremely driven, with a clear goal to succeed, and
+              committed to learning and self-development. Furthermore, I am
+              adept at handling multiple tasks on a daily basis competently and
+              at working well under pressure.
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
@@ -146,8 +146,8 @@ const About = () => {
                     alt="telegram logo - Yusif Qasim"
                     width={20}
                     height={20}
-                    loading="eager"
-                    priority={true}
+                    loading="lazy"
+                
                   />
                 </DownloadButton>
               </motion.div>
@@ -158,12 +158,8 @@ const About = () => {
                 transition={{ delay: 4, duration: 0.5 }}
                 className="flex justify-center"
               >
-                
-        <VideoPopup videoUrl="/introvid.mp4" />
-      
-    
+                <VideoPopup videoUrl="/introvid.mp4" />
               </motion.div>
-
             </motion.div>
           </motion.div>
         </div>

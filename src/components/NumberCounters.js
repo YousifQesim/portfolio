@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import CountUp from 'react-countup';
-import { useInView } from 'react-intersection-observer';
+import { useState, useEffect } from "react";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 function NumberCounters() {
   const [years, setYears] = useState(0);

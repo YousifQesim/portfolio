@@ -7,11 +7,12 @@ const ProjectCard = ({ project }) => {
       whileTap={{ scale: 0.95 }}
       className="w-full md:w-3/4 mx-auto   md:mt-24 p-4 hover:cursor-pointer"
     >
-        <div className=" items-center w-full text-center">
-            <h1 className="md:text-3xl text-xl font-extrabold mb-2 text-violet-600 opacity-70">{project.title}</h1>
-          </div>
+      <div className=" items-center w-full text-center">
+        <h1 className="md:text-3xl text-xl font-extrabold mb-2 text-violet-600 opacity-70">
+          {project.title}
+        </h1>
+      </div>
       <div className=" rounded-lg  overflow-hidden h-full bg-ProjectBackground shadow-sm box">
-      
         <div className="relative h-64 md:h-96 ">
           <Image
             src={project.image}
@@ -22,15 +23,12 @@ const ProjectCard = ({ project }) => {
             loading="eager"
             priority={true}
           />
-          
+
           <div className="absolute inset-0 bg-black bg-opacity-60" />
-        
         </div>
         <div className="p-4  ">
-      
           <div className="flex flex-col items-start mb-4 gap-y-5 w-full">
             <div className="flex  w-full flex-wrap">
-        
               {project.technologies.map((technology) => (
                 <span
                   key={technology}
@@ -50,14 +48,13 @@ const ProjectCard = ({ project }) => {
                 >
                   Demo
                   <Image
-              src="/click.svg"
-              alt="GitHub logo"
-              width={20}
-              height={20}
-              loading="eager"
-              priority={true}
-             />
-                
+                    src="/click.svg"
+                    alt="GitHub logo"
+                    width={20}
+                    height={20}
+                    loading="eager"
+                    priority={true}
+                  />
                 </a>
               ) : null}
               <a
@@ -68,16 +65,15 @@ const ProjectCard = ({ project }) => {
               >
                 GitHub
                 <Image
-              src="/githubwhite.svg"
-              alt="GitHub logo"
-              width={24}
-              height={24}
-              loading="eager"
-              priority={true}
-             />
+                  src="/githubwhite.svg"
+                  alt="GitHub logo"
+                  width={24}
+                  height={24}
+                  loading="eager"
+                  priority={true}
+                />
               </a>
             </div>
-            
           </div>
         </div>
       </div>

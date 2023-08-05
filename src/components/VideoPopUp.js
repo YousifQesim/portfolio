@@ -24,13 +24,13 @@ const VideoPopup = ({ videoUrl }) => {
       >
         Know Me By Video
         <Image
-                    src="/click.svg"
-                    alt="click logo"
-                    width={20}
-                    height={20}
-                    loading="eager"
-                    priority={true}
-                  />
+          src="/click.svg"
+          alt="click logo"
+          width={20}
+          height={20}
+          loading="eager"
+          priority={true}
+        />
       </button>
       {showVideo && (
         <motion.div

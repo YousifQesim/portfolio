@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Timeline({ data }) {
-
   const controls = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.2 });
 
@@ -47,9 +46,7 @@ export default function Timeline({ data }) {
                     className="timeline-title text-white underline decoration-indigo-500 text-sm lg:text-xl "
                   >
                     {item.title}
-                  
                   </motion.h3>
-                  
                 </Link>
               ) : (
                 <motion.h3

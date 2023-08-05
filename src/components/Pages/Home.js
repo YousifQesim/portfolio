@@ -20,10 +20,13 @@ const AnimatedImage = ({ src, alt, width, height }) => {
 const Home = () => {
   return (
     <div className="h-screen flex justify-center items-center relative">
-         <Head>
+      <Head>
         <title>Yusif Qasim - Portfolio</title>
         <meta name="description" content="Yusif Qasim - Portfolio" />
-        <meta name="keywords" content="Yusif , qasim, Portfolio, Yusif Qasim Portfolio, next js portfolio" />
+        <meta
+          name="keywords"
+          content="Yusif , qasim, Portfolio, Yusif Qasim Portfolio, next js portfolio"
+        />
       </Head>
       <div className="flex xl:justify-center justify-start md:ml-12 ml-4 xl:ml-0 items-center gap-8 mb-24 flex-wrap">
         <div className="flex vsm:flex-col flex-row order-last vsm:order-first    gap-6">
@@ -37,8 +40,8 @@ const Home = () => {
               alt="LinkedIn logo - Yusif Qasim"
               width={24}
               height={24}
-              loading="eager"
-              priority={true}
+              loading="lazy"
+          
             />
           </Link>
           <Link
@@ -51,8 +54,8 @@ const Home = () => {
               alt="GitHub logo - Yusif Qasim"
               width={24}
               height={24}
-              loading="eager"
-              priority={true}
+              loading="lazy"
+          
             />
           </Link>
           <Link
@@ -65,8 +68,8 @@ const Home = () => {
               alt="Telegram logo - Yusif Qasim"
               width={24}
               height={24}
-              loading="eager"
-              priority={true}
+              loading="lazy"
+          
             />
           </Link>
         </div>
@@ -100,24 +103,23 @@ const Home = () => {
                 experience.
               </motion.p>
               <a href="/#contact">
-              <motion.button
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1, duration: 0.8    }}
-                className="text-white bg-violet-600 hover:bg-violet-800 transition ease-in-out delay-10 duration-200 gap-2  focus:outline-none font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center"
+                <motion.button
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1, duration: 0.8 }}
+                  className="text-white bg-violet-600 hover:bg-violet-800 transition ease-in-out delay-10 duration-200 gap-2  focus:outline-none font-medium rounded-lg text-sm px-2 py-2.5 mt-4 text-center inline-flex items-center"
                 >
-                Contact me
-                <AnimatedImage
-                  src="/direct.svg"
-                  alt="Telegram logo - Yusif Qasim"
-                  width={20}
-                  height={20}
-                  loading="eager"
-                  priority={true}
+                  Contact me
+                  <AnimatedImage
+                    src="/direct.svg"
+                    alt="Telegram logo - Yusif Qasim"
+                    width={20}
+                    height={20}
+                    loading="lazy"
+                
                   />
-              </motion.button>
-                  </a>
-              
+                </motion.button>
+              </a>
             </div>
 
             <a href="#about">
@@ -132,25 +134,21 @@ const Home = () => {
                   alt="Mouse logo - Yusif Qasim"
                   width={24}
                   height={24}
-                  loading="eager"
-                  priority={true}
+                  loading="lazy"
+              
                 />
 
-                <p className="text-white text-xs font-medium">
-                  Scroll down 
-                </p>
+                <p className="text-white text-xs font-medium">Scroll down</p>
                 <span className="animate-bounce">
-
-                <AnimatedImage
-              
-              src="/down.svg"
-              alt="Mouse logo - Yusif Qasim"
-              width={24}
-              height={24}
-              loading="eager"
-              priority={true}
-              />
-              </span>
+                  <AnimatedImage
+                    src="/down.svg"
+                    alt="Mouse logo - Yusif Qasim"
+                    width={24}
+                    height={24}
+                    loading="lazy"
+                
+                  />
+                </span>
               </motion.div>
             </a>
           </div>
@@ -168,8 +166,8 @@ const Home = () => {
               alt="Personal Image - Yusif Qasim"
               width={270}
               height={270}
-              loading="eager"
-              priority={true}
+              loading="lazy"
+          
             />
           </motion.div>
         </div>
