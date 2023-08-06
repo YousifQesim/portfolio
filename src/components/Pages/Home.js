@@ -162,11 +162,13 @@ const Home = () => {
             className="relative w-full md:w-4/5 mx-auto"
           >
             <AnimatedImage
+            loading="lazy"
               src="/my.webp"
               alt="Personal Image - Yusif Qasim"
               width={270}
-              height={270}          
+              height={270}
             />
+
           </motion.div>
         </div>
       </div>

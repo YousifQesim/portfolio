@@ -170,6 +170,7 @@ const ProjectsPage = () => {
                 className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
                   index === currentSlide ? "bg-violet-600" : "bg-gray-300"
                 }`}
+                aria-label="Name"
               />
             ))}
             <motion.button
