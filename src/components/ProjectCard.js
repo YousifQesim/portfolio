@@ -8,7 +8,7 @@ const ProjectCard = ({ project }) => {
       whileTap={{ scale: 0.95 }}
       className="w-full md:w-3/4 mx-auto   md:mt-24 p-4 hover:cursor-pointer"
     >
-      <div className=" items-center w-full text-center">
+      <div className=" items-center w-full text-center hidden md:inline">
         <h1 className="md:text-3xl text-xl font-extrabold mb-2 text-violet-600 opacity-70">
           {project.title}
         </h1>
@@ -29,6 +29,11 @@ const ProjectCard = ({ project }) => {
         </div>
         <div className="p-4  ">
           <div className="flex flex-col items-start mb-4 gap-y-5 w-full">
+          <div className=" items-center ml-2 w-full inline md:hidden">
+        <h1 className="md:text-3xl text-xl font-extrabold mb-2 text-violet-600 opacity-70">
+          {project.title}
+        </h1>
+      </div>
             <div className="flex  w-full flex-wrap">
               {project.technologies.map((technology) => (
                 <span
@@ -39,13 +44,13 @@ const ProjectCard = ({ project }) => {
                 </span>
               ))}
             </div>
-            <div className="flex justify-center  w-full">
+            <div className="flex md:justify-center justify-start  w-full">
               {project.livePreview ? (
                 <a
                   href={project.livePreview}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-violet-600 text-white px-4 py-2 rounded-full mx-2 flex gap-x-1 "
+                  className="bg-violet-600 text-white px-4 py-2 rounded-lg mx-2 flex gap-x-1 "
                 >
                   Demo
                   <Image
@@ -62,7 +67,7 @@ const ProjectCard = ({ project }) => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black text-white px-4 py-2 rounded-full mx-2 flex gap-x-1"
+                className="bg-black text-white px-4 py-2 rounded-lg mx-2 flex gap-x-1"
               >
                 GitHub
                 <Image
