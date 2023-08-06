@@ -116,7 +116,7 @@ const App = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex gap-x-4">
-              <div className="relative">
+              <div className="relative" for="name">
                 <label className="text-white block mb-2 absolute left-2 top-2 text-xs">
                   Name
                 </label>
@@ -129,7 +129,7 @@ const App = () => {
               </div>
 
               <div className="relative">
-                <label className="text-white block mb-2 absolute left-2 top-2 text-xs">
+                <label className="text-white block mb-2 absolute left-2 top-2 text-xs" for="subject">
                   Subject
                 </label>
                 <input
@@ -141,7 +141,7 @@ const App = () => {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative" for="email">
               <label className="text-white block mb-2 absolute left-2 top-2 text-xs">
                 Email
               </label>
@@ -153,7 +153,7 @@ const App = () => {
               />
             </div>
             <div className="relative">
-              <label className="text-white block mb-2 absolute left-2 top-2 text-xs ">
+              <label className="text-white block mb-2 absolute left-2 top-2 text-xs " for="message">
                 Message
               </label>
               <textarea
