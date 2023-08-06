@@ -104,16 +104,17 @@ const ProjectsPage = () => {
           <div className="opacity-0 md:opacity-100">
             <motion.button
               type="button"
-              className="absolute top-1/2 left-4 z-30 flex items-center justify-center h-12 w-12 rounded-full dark:bg-gray-800/30 group hover:bg-violet-600 dark:group-hover:bg-gray-800/60 focus:ring-4 focus:ring-white dark:focus:ring-gray-800/70 focus:outline-none border-2 border-violet-600"
+              className="absolute top-1/2 left-4 z-30 flex items-center justify-center h-12 w-12 rounded-full  group hover:bg-violet-600   focus:ring-white  focus:outline-none border-2 border-violet-600"
               data-carousel-prev
               onClick={handleCarouselPrev}
             >
               <span className="sr-only">Previous</span>
               <svg
-                className="w-6 h-6 text-white dark:text-gray-800"
+                className="w-6 h-6 hover:w-8 hover:h-8 text-violet-600"
                 xmlns="http://www.w3.org/2000/svg"
-                fill="rgb(79 70 229)"
+                fill="hsl(250, 28%, 12%)"
                 viewBox="0 0 24 24"
+
                 stroke="currentColor"
               >
                 <path
@@ -126,15 +127,15 @@ const ProjectsPage = () => {
             </motion.button>
             <motion.button
               type="button"
-              className="absolute top-1/2 right-4 z-30 flex items-center justify-center h-12 w-12 rounded-full dark:bg-gray-800/30 group hover:bg-violet-600 dark:group-hover:bg-gray-800/60 focus:ring-4 focus:ring-white dark:focus:ring-gray-800/70 focus:outline-none border-2 border-violet-600"
+              className="absolute top-1/2 right-4 z-30 flex items-center justify-center h-12 w-12 rounded-full  group hover:bg-violet-600   focus:ring-white  focus:outline-none border-2 border-violet-600"
               data-carousel-next
               onClick={handleCarouselNext}
             >
               <span className="sr-only">Next</span>
               <svg
-                className="w-6 h-6 text-white dark:text-gray-800"
+                className="w-6 h-6 hover:w-8 hover:h-8 text-violet-600"
                 xmlns="http://www.w3.org/2000/svg"
-                fill="rgb(79 70 229)"
+                fill="hsl(250, 28%, 12%)"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
