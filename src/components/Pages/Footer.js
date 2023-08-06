@@ -25,7 +25,7 @@ const Footer = () => {
               >
                 <div
                   className={`items-center justify-center w-full flex md:space-x-8 mx-auto max-w-screen-xl   p-4`}
-                  id="navbar-default"
+                  id="navbar-default2"
                 >
                   <ul className="font-medium text-sm flex space-x-8 ">
                     <li>

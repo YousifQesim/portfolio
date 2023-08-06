@@ -122,7 +122,7 @@ const Home = () => {
               </a>
             </div>
 
-            <a href="#about">
+            <a href="#about" aria-label="Read more about page">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -162,7 +162,7 @@ const Home = () => {
             className="relative w-full md:w-4/5 mx-auto"
           >
             <AnimatedImage
-            loading="lazy"
+            loading="eager"
               src="/my.webp"
               alt="Personal Image - Yusif Qasim"
               width={270}
