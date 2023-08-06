@@ -323,13 +323,13 @@ const Navbar = () => {
         className={`${
           isMenuOpen ? "hidden" : "flex"
         } items-center justify-between md:flex md:space-x-8 mx-auto max-w-screen-xl hidden p-4`}
-        id="navbar-default"
+        id="navbar-default1"
       >
            <div
         className={`${
           isMenuOpen ? 'hidden' : 'flex'
         } items-center justify-between w-full md:flex md:space-x-8 mx-auto max-w-screen-xl hidden  p-4`}
-        id="navbar-default"
+        id="navbar-default2"
       >
         <a href="/#">
 
