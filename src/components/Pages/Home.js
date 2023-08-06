@@ -165,9 +165,7 @@ const Home = () => {
               src="/my.webp"
               alt="Personal Image - Yusif Qasim"
               width={270}
-              height={270}
-          priority={true}
-          
+              height={270}          
             />
           </motion.div>
         </div>
