@@ -125,6 +125,7 @@ const App = () => {
                   name="user_name"
                   className="w-full pt-8 pl-2  border h-16  rounded-md mb-4 bg-inputBackground border-none text-gray-300 text-xs "
                   required
+                  id="name"
                 />
               </div>
 
@@ -137,6 +138,7 @@ const App = () => {
                   name="subject"
                   className="w-full pt-8 pl-2 border h-16 rounded-md mb-4 bg-inputBackground border-none text-xs text-gray-300 "
                   required
+                  id="subject"
                 />
               </div>
             </div>
@@ -150,6 +152,7 @@ const App = () => {
                 name="email"
                 className="w-full pt-8 pl-2 border h-16 rounded-md mb-4 bg-inputBackground border-none text-xs text-gray-300"
                 required
+                id="email"
               />
             </div>
             <div className="relative">
@@ -162,6 +165,7 @@ const App = () => {
                 required
                 rows="5"
                 cols="25"
+                id="message"
               ></textarea>
             </div>
 
