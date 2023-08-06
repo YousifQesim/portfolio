@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,7 +16,18 @@ const Navbar = () => {
     setIsMenuOpen(false);
     setActiveLink(link);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMenuOpen]);
   return (
     <nav className="bg-transparent relative">
       {/* Mobile menu items */}
