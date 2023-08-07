@@ -15,16 +15,14 @@ const ProjectCard = ({ project }) => {
       </div>
       <div className=" rounded-lg  overflow-hidden h-full bg-ProjectBackground shadow-sm box">
         <div className="relative h-64 md:h-96 ">
-          <Image
-            src={project.image}
-            alt={project.title}
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-            loading="eager"
-            priority={true}
-          />
-
+<Image
+  src={project.image}
+  alt={project.title}
+  quality={100}
+  loading="eager"
+  priority={true}
+  layout="fill"
+/>
           <div className="absolute inset-0 bg-black bg-opacity-60" />
         </div>
         <div className="p-4  ">

@@ -151,9 +151,6 @@ nav {
   background-color: hsl(250, 28%, 12%) !important;
 }
 
-.inputbox {
-  box-shadow: rgba(79, 77, 180, 0.1) 0px 10px 36px 0px, rgba(151, 87, 208, 0.01) 0px 0px 0px 1px;
-}
 
 .input {
   background: hsl(250, 29%, 16%) !important;
@@ -193,10 +190,3 @@ p {
   font-family: 'Roboto', sans-serif;
 }
 
-.Toastify__toast-body{
-  --toastify-color-success: #7c3aed !important;
-}
-.Toastify__close-button--light {
-  color: #7c3aed !important;
-  opacity: .8 !important;
-}
