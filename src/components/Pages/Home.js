@@ -161,13 +161,13 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             className="relative w-full md:w-4/5 mx-auto"
           >
-            <AnimatedImage
+            {/* <AnimatedImage
             loading="eager"
               src="/my.webp"
               alt="Personal Image - Yusif Qasim"
               width={270}
               height={270}
-            />
+            /> */}
 
           </motion.div>
         </div>
