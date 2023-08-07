@@ -95,7 +95,7 @@ export default function Qualification() {
                   alt="education logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  loading="lazy"
+                  priority={true}
               
                 />
                 <Image
@@ -106,7 +106,7 @@ export default function Qualification() {
                   alt="education logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  loading="lazy"
+                  priority={true}
               
                 />
                 Education
@@ -129,7 +129,7 @@ export default function Qualification() {
                   alt="certification logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  loading="lazy"
+                  priority={true}
               
                 />
                 <Image
@@ -140,7 +140,7 @@ export default function Qualification() {
                   alt="certification logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  loading="lazy"
+                  priority={true}
               
                 />
                 Certifications
@@ -159,7 +159,7 @@ export default function Qualification() {
                   alt="work logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  loading="lazy"
+                  priority={true}
               
                 />
                 <Image
@@ -168,7 +168,7 @@ export default function Qualification() {
                   alt="work logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  loading="lazy"
+                  priority={true}
               
                 />
                 Work

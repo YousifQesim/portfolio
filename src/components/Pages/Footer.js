@@ -59,7 +59,7 @@ const Footer = () => {
                   alt="Telegram logo"
                   width={20}
                   height={20}
-                  loading="lazy"
+                  priority={true}
                   style={{ width: "auto", height: "auto" }}
                 />
               </a>
@@ -72,7 +72,7 @@ const Footer = () => {
                   alt="Telegram logo"
                   width={20}
                   height={20}
-                  loading="lazy"
+                  priority={true}
               
                 />
               </a>
@@ -85,7 +85,7 @@ const Footer = () => {
                   alt="Telegram logo"
                   width={20}
                   height={20}
-                  loading="lazy"
+                  priority={true}
               
                 />
               </a>
@@ -98,7 +98,7 @@ const Footer = () => {
                   alt="Telegram logo"
                   width={20}
                   height={20}
-                  loading="lazy"
+                  priority={true}
               
                 />
               </a>
@@ -111,7 +111,7 @@ const Footer = () => {
                   alt="Telegram logo"
                   width={20}
                   height={20}
-                  loading="lazy"
+                  priority={true}
               
                 />
               </a>

@@ -66,7 +66,7 @@ const App = () => {
               alt="phone logo - Yusif Qasim"
               width={24}
               height={24}
-              loading="lazy"
+              priority={true}
           
             />
             <div>
@@ -80,7 +80,7 @@ const App = () => {
               alt="email logo - Yusif Qasim"
               width={24}
               height={24}
-              loading="lazy"
+              priority={true}
           
             />
             <div>
@@ -96,7 +96,7 @@ const App = () => {
               alt="location logo - Yusif Qasim"
               width={24}
               height={24}
-              loading="lazy"
+              priority={true}
           
             />
             <div>

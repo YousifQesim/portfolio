@@ -81,7 +81,7 @@ function Skills() {
                     height={35}
                     className="mx-auto my-0"
                     variants={logoVariants}
-                    loading='lazy'
+                    priority={true}
                   />
                 </div>
               </div>

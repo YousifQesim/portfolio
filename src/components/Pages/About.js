@@ -83,7 +83,7 @@ const About = () => {
               alt="Next.js Logo - Yusif Qasim"
               width={400}
               height={400}
-              loading="lazy"
+              priority={true}
           
             />
           </motion.div>
@@ -147,7 +147,7 @@ const About = () => {
                     alt="telegram logo - Yusif Qasim"
                     width={20}
                     height={20}
-                    loading="lazy"
+                    priority={true}
                 
                   />
                 </DownloadButton>
