@@ -40,7 +40,7 @@ const Home = () => {
               alt="LinkedIn logo - Yusif Qasim"
               width={24}
               height={24}
-              priority={true}
+              loading="lazy"
           
             />
           </Link>
@@ -54,7 +54,7 @@ const Home = () => {
               alt="GitHub logo - Yusif Qasim"
               width={24}
               height={24}
-              priority={true}
+              loading="lazy"
           
             />
           </Link>
@@ -68,7 +68,7 @@ const Home = () => {
               alt="Telegram logo - Yusif Qasim"
               width={24}
               height={24}
-              priority={true}
+              loading="lazy"
           
             />
           </Link>
@@ -115,7 +115,7 @@ const Home = () => {
                     alt="Telegram logo - Yusif Qasim"
                     width={20}
                     height={20}
-                    priority={true}
+                    loading="lazy"
                 
                   />
                 </motion.button>
@@ -134,7 +134,7 @@ const Home = () => {
                   alt="Mouse logo - Yusif Qasim"
                   width={24}
                   height={24}
-                  priority={true}
+                  loading="lazy"
               
                 />
 
@@ -145,7 +145,7 @@ const Home = () => {
                     alt="Mouse logo - Yusif Qasim"
                     width={24}
                     height={24}
-                    priority={true}
+                    loading="lazy"
                 
                   />
                 </span>

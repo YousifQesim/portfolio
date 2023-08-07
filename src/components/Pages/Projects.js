@@ -161,7 +161,7 @@ const ProjectsPage = () => {
                 alt="prev logo - Yusif Qasim"
                 width={30}
                 height={30}
-                priority={true}
+                loading="lazy"
             
               />
             </motion.button>
@@ -186,7 +186,7 @@ const ProjectsPage = () => {
                 alt="next logo - Yusif Qasim"
                 width={30}
                 height={30}
-                priority={true}
+                loading="lazy"
             
               />
             </motion.button>

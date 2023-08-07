@@ -95,8 +95,7 @@ export default function Qualification() {
                   alt="education logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  priority={true}
-              
+                  loading="lazy"
                 />
                 <Image
                   className={`${
@@ -106,8 +105,8 @@ export default function Qualification() {
                   alt="education logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  priority={true}
-              
+                  loading="lazy"
+                
                 />
                 Education
               </motion.button>
@@ -129,8 +128,8 @@ export default function Qualification() {
                   alt="certification logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  priority={true}
-              
+                  loading="lazy"
+                
                 />
                 <Image
                   className={`${
@@ -140,8 +139,8 @@ export default function Qualification() {
                   alt="certification logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  priority={true}
-              
+                  loading="lazy"
+                
                 />
                 Certifications
               </motion.button>
@@ -159,8 +158,8 @@ export default function Qualification() {
                   alt="work logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  priority={true}
-              
+                  loading="lazy"
+                
                 />
                 <Image
                   className={`${activeButton === "work" ? "hidden" : "inline"}`}
@@ -168,8 +167,8 @@ export default function Qualification() {
                   alt="work logo - Yusif Qasim"
                   width={20}
                   height={20}
-                  priority={true}
-              
+                  loading="lazy"
+                
                 />
                 Work
               </motion.button>
