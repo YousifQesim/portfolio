@@ -162,8 +162,7 @@ const Home = () => {
             className="relative w-full md:w-4/5 mx-auto"
           >
             <Image
-          
-              src="/my.webp"
+              src="/my2.png"
               alt="Personal Image - Yusif Qasim"
               width={270}
               height={270}
