@@ -367,7 +367,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <Link
+            <a
               className={`${
                 activeLink === '/#about'    ? 'text-violet-600'
                 : 'text-white'
@@ -379,10 +379,10 @@ const Navbar = () => {
           
             >
               About
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               className={`${
                 activeLink === '/#skills'    ? 'text-violet-600'
                 : 'text-white'
@@ -392,10 +392,10 @@ const Navbar = () => {
 
             >
               Skills
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               className={`${
                 activeLink === "/#Qualification" ? "text-violet-600" : "text-white"
               }`}
@@ -404,7 +404,7 @@ const Navbar = () => {
 
             >
               Qualification
-            </Link>
+            </a>
           </li>
           <li>
             <a

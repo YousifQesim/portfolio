@@ -193,3 +193,10 @@ p {
   font-family: 'Roboto', sans-serif;
 }
 
+.Toastify__toast-body{
+  --toastify-color-success: #7c3aed !important;
+}
+.Toastify__close-button--light {
+  color: #7c3aed !important;
+  opacity: .8 !important;
+}
